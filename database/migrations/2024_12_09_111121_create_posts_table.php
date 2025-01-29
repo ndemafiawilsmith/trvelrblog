@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');// Foreign key linking to users table
             $table->timestamp('published_at')->nullable();
             $table->string('featured_image')->nullable();
-            $table->foreignId('category_id')->constrained(); // Foreign key linking to categories table
+            $table->uuid('category_id')->constrained(); // Foreign key linking to categories table
             $table->json('tags')->nullable(); // Store tags as JSON array
             $table->enum('status', ['draft', 'published', 'review'])->default('draft');
             $table->string('meta_title')->nullable();
