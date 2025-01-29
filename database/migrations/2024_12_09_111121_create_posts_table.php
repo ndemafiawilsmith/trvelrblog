@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('excerpt')->nullable();
             $table->json('content')->nullable(); // Store dynamic blocks as JSON // Adjusted to longText for storing large amounts of text
-            $table->foreignId('author_id')->constrained('users'); // Foreign key linking to users table
+            $table->uuid('author_id'); // Match users.id data type
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');// Foreign key linking to users table
             $table->timestamp('published_at')->nullable();
             $table->string('featured_image')->nullable();
             $table->foreignId('category_id')->constrained(); // Foreign key linking to categories table
