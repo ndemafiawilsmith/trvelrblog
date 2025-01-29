@@ -15,7 +15,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('resources', function (Blueprint $table) {
-            $table->foreignId('author_id')->default(1)->constrained('users'); // Assuming 1 is a valid user ID.
+            $table->uuid('author_id')->default(1)->constrained('users'); // Assuming 1 is a valid user ID.
         });
     }
 

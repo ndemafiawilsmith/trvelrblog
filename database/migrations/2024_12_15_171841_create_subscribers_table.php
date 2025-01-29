@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('email');
             $table->string('resource_id')->nullable();
-            $table->foreignId('author_id')->default(null)->constrained('users');
+            $table->uuid('author_id')->default(null)->constrained('users');
             $table->timestamps();
         });
     }
