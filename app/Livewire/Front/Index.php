@@ -11,19 +11,19 @@ class Index extends Component
     public function render()
     {
         // Get the main blog post (latest published blog post)
-        $mainBlog = Post::where('status', 'published')
+        $mainBlog = Post::where('status', 'draft')
             ->orderBy('published_at', 'desc')
             ->first();
 
         // Ensure $mainBlog exists before using it
         if ($mainBlog) {
-            $trending = Post::where('status', 'published')
+            $trending = Post::where('status', 'draft')
                 ->where('id', '!=', $mainBlog->id) // Exclude the main blog post
                 ->orderBy('published_at', 'desc')
                 ->take(4)
                 ->get();
         } else {
-            $trending = Post::where('status', 'published')
+            $trending = Post::where('status', 'draft')
                 ->orderBy('published_at', 'desc')
                 ->take(4)
                 ->get(); // Get trending blogs without excluding any
@@ -32,7 +32,7 @@ class Index extends Component
         // Ensure $mainBlog is not null before accessing its ID
         $excludedIds = collect($mainBlog ? [$mainBlog->id] : [])->merge($trending->pluck('id'))->toArray();
 
-        $otherBlogs = Post::where('status', 'published')
+        $otherBlogs = Post::where('status', 'draft')
             ->whereNotIn('id', $excludedIds) // Exclude already displayed blogs
             ->orderBy('published_at', 'desc')
             ->paginate(10); // Paginate to control the number of results
