@@ -5,11 +5,13 @@ namespace App\Models;
 use App\Traits\UUID;
 use Illuminate\Database\Eloquent\Model;
 use Traversable;
+use Coderflex\Laravisit\Concerns\CanVisit;
+use Coderflex\Laravisit\Concerns\HasVisits;
 
-class Post extends Model
+class Post extends Model implements CanVisit
 {
-    use UUID;
-    
+    use UUID, HasVisits;
+
     protected $fillable = [
         'title',
         'slug',
@@ -48,7 +50,7 @@ class Post extends Model
     public function readingTime()
     {
         $totalWords = 0;
-    
+
         // Ensure the 'content' attribute exists and is iterable
         if (is_array($this->content) || $this->content instanceof Traversable) {
             foreach ($this->content as $section) {
@@ -56,12 +58,12 @@ class Post extends Model
                     // Strip HTML tags and count words
                     $text = strip_tags($section['text']);
                     $wordCount = str_word_count($text);
-    
+
                     $totalWords += $wordCount;
                 }
             }
         }
-    
+
         // Calculate reading time in minutes (assuming 225 words per minute)
         return ceil($totalWords / 225);
     }

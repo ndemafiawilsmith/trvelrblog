@@ -132,7 +132,28 @@
                         <img src="{{ Storage::url($mainBlog->featured_image) }}" alt="Image">
                     </div>
                     <div class="news-card-info">
-                        <a href="news-by-category.html" class="news-cat">Business</a>
+                        <a href="" class="news-cat1" id="newsCat">{{ $mainBlog->tags[0] ?? 'Travel' }}</a>
+
+
+
+                        @push('scripts')
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    let tags = @json($mainBlog->tags); // Get the tags array from Laravel
+                                    let index = 0;
+                                    let tagElement = document.getElementById("newsCat1");
+
+                                    function changeTag() {
+                                        if (tags.length > 0) {
+                                            tagElement.textContent = tags[index];
+                                            index = (index + 1) % tags.length; // Loop back to the first tag
+                                        }
+                                    }
+
+                                    setInterval(changeTag, 5000); // Change tag every 5 seconds
+                                });
+                            </script>
+                    @endpush
                         <h3><a href="{{ route('blog.detail', ['id' => $mainBlog->id]) }}">{{ $mainBlog->title }}</a>
                         </h3>
                         @php
@@ -158,9 +179,10 @@
                         <ul class="news-metainfo list-style">
                             <li class="author">
                                 <span class="author-img">
-                                    <img src="assets/img/author/author-thumb-1.webp" alt="Image">
+                                    <img src="https://ui-avatars.com/api?name={{ $mainBlog->author->name }}"
+                                        alt="Image">
                                 </span>
-                                <a href="author.html">James William</a>
+                                <a href="">{{ $mainBlog->author->name }}</a>
                             </li>
                             <li><i class="fi fi-rr-calendar-minus"></i><a href="news-by-date.html">Feb 03, 2024</a>
                             </li>
@@ -176,7 +198,27 @@
                             <div class="news-card-thirteen">
                                 <div class="news-card-img trending">
                                     <img src="{{ Storage::url($blog->featured_image) }}" alt="Iamge">
-                                    <a href="business.html" class="news-cat">Fashion</a>
+                                    <a href="business.html" class="news-cat"id="newsCat">{{ $blog->tags[0] ?? 'Travel' }}</a>
+
+
+                                    @push('scripts')
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function() {
+                                                let tags = @json($blog->tags); // Get the tags array from Laravel
+                                                let index = 0;
+                                                let tagElement = document.getElementById("newsCat");
+
+                                                function changeTag() {
+                                                    if (tags.length > 0) {
+                                                        tagElement.textContent = tags[index];
+                                                        index = (index + 1) % tags.length; // Loop back to the first tag
+                                                    }
+                                                }
+
+                                                setInterval(changeTag, 5000); // Change tag every 5 seconds
+                                            });
+                                        </script>
+                                    @endpush
                                 </div>
                                 <div class="news-card-info">
                                     <h3><a
@@ -186,7 +228,8 @@
                                         <li><i class="fi fi-rr-calendar-minus"></i><a
                                                 href="news-by-date.html">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d, Y') }}</a>
                                         </li>
-                                        <li><i class="fi fi-rr-clock-three"></i>{{ $blog->readingTime() }} Min Read</li>
+                                        <li><i class="fi fi-rr-clock-three"></i>{{ $blog->readingTime() }} Min Read
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -882,8 +925,9 @@
                                     <a href="business.html" class="news-cat">Lifestyle</a>
                                 </div>
                                 <div class="news-card-info">
-                                    <h3><a href="business-details.html">{{$blog->title}}</a></h3>
-                                    <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet conse ctet
+                                    <h3><a href="business-details.html">{{ $blog->title }}</a></h3>
+                                    <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet conse
+                                        ctet
                                         fringilla purus leo dignissim congue. Mauris elementum accumsan.</p>
                                     <ul class="news-metainfo list-style">
                                         <li class="author">
@@ -906,9 +950,11 @@
                         <div class="sidebar-widget">
                             <h3 class="sidebar-widget-title">Explore Topics</h3>
                             <ul class="category-widget list-style">
-                                @foreach($categories as $category)
+                                @foreach ($categories as $category)
                                     <li>
-                                        <a href="business.html"><img src="assets/img/icons/arrow-right.svg" alt="Image">{{$category->name}} <span>({{count($category->posts)}})</span>
+                                        <a href="business.html"><img src="assets/img/icons/arrow-right.svg"
+                                                alt="Image">{{ $category->name }}
+                                            <span>({{ count($category->posts) }})</span>
                                         </a>
                                     </li>
                                 @endforeach
@@ -1501,7 +1547,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
 
     <div class="container-fluid pb-50">

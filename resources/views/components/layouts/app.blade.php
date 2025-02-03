@@ -48,7 +48,7 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
-     
+
     {{-- <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -149,11 +149,11 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link active">
+                            <a href="{{route('Home')}}" class="nav-link active">
                                 Home
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="dropdown-toggle nav-link">
                                 Destinations
@@ -173,7 +173,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="javascript:void(0)" class="dropdown-toggle nav-link">
                                 Travel by Month
                             </a>
@@ -189,15 +189,15 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
- 
+                        </li> --}}
+
                         {{-- <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link">
                                 Itineraries
                             </a>
                         </li> --}}
 
-                        
+
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link">
                                 Tour Marketplace
@@ -303,7 +303,7 @@
                             </button>
                         </div>
                         <div class="option-item">
-                            <a href="/admin/login" class="btn-two">Sign In</a>
+                            <a href="/admin/login" class="btn-two">Share your story</a>
                         </div>
                     </div>
                 </div>

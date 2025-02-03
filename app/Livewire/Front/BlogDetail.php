@@ -5,6 +5,7 @@ namespace App\Livewire\Front;
 use App\Models\Post;
 use App\Models\Resource;
 use App\Models\Subscriber;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 use Livewire\Component;
 
@@ -19,29 +20,7 @@ class BlogDetail extends Component
         $this->id = $id;
     }
 
-    public function render()
-    {
-        $blog = Post::findorfail($this->id);
-        // dd($blog->content);
 
-        // Calculate Read Time 
-        $totalWords = 0;
-
-        foreach ($blog->content as $section) {
-            if ($section['type'] === 'text' && !empty($section['text'])) {
-                // Strip HTML tags and count words
-                $text = strip_tags($section['text']); // Strip HTML tags
-                $wordCount = str_word_count($text);   // Count words
-
-                $totalWords += $wordCount;
-            }
-        }
-
-        // Assuming average reading speed of 225 words per minute
-        $averageReadingSpeed = 225;
-        $minutesToRead = ceil($totalWords / $averageReadingSpeed);
-        return view('livewire.front.blog-detail', with(compact('blog', 'minutesToRead')));
-    }
 
     public function setLink($pdf){
         $this->pdfLink = $pdf;
@@ -61,4 +40,41 @@ class BlogDetail extends Component
         }
 
     }
+
+
+
+    public function render()
+    {
+        $blog = Post::findorfail($this->id);
+        // dd($blog->content);
+
+        // Calculate Read Time
+        $totalWords = 0;
+
+        foreach ($blog->content as $section) {
+            if ($section['type'] === 'text' && !empty($section['text'])) {
+                // Strip HTML tags and count words
+                $text = strip_tags($section['text']); // Strip HTML tags
+                $wordCount = str_word_count($text);   // Count words
+
+                $totalWords += $wordCount;
+            }
+        }
+
+
+        // Check if the blog exists before tracking
+        if ($blog) {
+            // Track the visit with a unique IP
+            $blog->visit()->withIp();
+        }
+
+
+        $totalViews = DB::table('laravisits')->where('visitable_id', $blog->id)->where('visitable_type', 'App\Models\Post')->count();
+
+        // Assuming average reading speed of 225 words per minute
+        $averageReadingSpeed = 225;
+        $minutesToRead = ceil($totalWords / $averageReadingSpeed);
+        return view('livewire.front.blog-detail', with(compact('blog', 'minutesToRead', 'totalViews')));
+    }
+
 }

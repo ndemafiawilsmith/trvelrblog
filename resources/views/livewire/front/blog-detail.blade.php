@@ -1,6 +1,6 @@
 <div>
 
-    
+
     <x-slot name="title">{{ $blog->title }}</x-slot>
     <x-slot name="description">{{ $blog->title }}</x-slot>
     <x-slot name="logo">{{ Storage::url($blog->featured_image) }}</x-slot>
@@ -18,7 +18,7 @@
             </ul>
         </div>
     </div>
-    
+
 
 
     @push('styles')
@@ -69,21 +69,43 @@
                     <article>
                         <div class="news-img">
                             <div class="image-container">
-                                <img src="{{ Storage::url($blog->featured_image) }}" alt="{{$blog->title}}" loading="lazy">
+                                <img src="{{ Storage::url($blog->featured_image) }}" alt="{{ $blog->title }}"
+                                    loading="lazy">
                             </div>
-                            <a href="business.html" class="news-cat">Business</a>
+                            <a href="#" class="news-cat" id="newsCat">{{ $blog->tags[0] ?? 'Travel' }}</a>
+
+                            @push('scripts')
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        let tags = @json($blog->tags); // Get the tags array from Laravel
+                                        let index = 0;
+                                        let tagElement = document.getElementById("newsCat");
+
+                                        function changeTag() {
+                                            if (tags.length > 0) {
+                                                tagElement.textContent = tags[index];
+                                                index = (index + 1) % tags.length; // Loop back to the first tag
+                                            }
+                                        }
+
+                                        setInterval(changeTag, 5000); // Change tag every 5 seconds
+                                    });
+                                </script>
+                            @endpush
                         </div>
                         <ul class="news-metainfo list-style">
                             <li class="author">
                                 <span class="author-img">
-                                    <img src="{{ asset('assets/img/author/author-thumb-1.webp') }}" alt="Image">
+                                    <img src="https://ui-avatars.com/api?name={{ $blog->author->name }}"
+                                        alt="Author Image">
                                 </span>
                                 <a href="author.html">{{ $blog->author->name }}</a>
                             </li>
                             <li><i class="fi fi-rr-calendar-minus"></i><a
-                                    href="news-by-date.html">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d, Y') }}</a>
+                                    href="">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d, Y') }}</a>
                             </li>
                             <li><i class="fi fi-rr-clock-three"></i>{{ $minutesToRead }} Min Read</li>
+                            <li><i class="fi fi-rr-eye"></i>{{ $totalViews }} views</li>
                         </ul>
                         <div class="news-para">
                             <h1>{{ $blog->title }}</h1>
@@ -130,7 +152,7 @@
                                         <!-- Display the embedded map -->
                                         {!! $content['map'] !!}
                                     @endif
-                                        
+
                                 </div>
                             @elseif ($content['type'] == 'pdf')
                                 <div class="news-pdf">
@@ -142,7 +164,9 @@
                                             </span>
                                             <div class="contact-info">
                                                 <div class="option-item">
-                                                    <a href="javascript:void(0);" wire:click="setLink('{{$content['pdf']}}')" class="btn-two">Download
+                                                    <a href="javascript:void(0);"
+                                                        wire:click="setLink('{{ $content['pdf'] }}')"
+                                                        class="btn-two">Download
                                                         Pdf</a>
                                                 </div>
                                             </div>
@@ -359,8 +383,8 @@
         </div>
     </div>
 
-    
-    
+
+
     <div class="modal fade resource-pop" id="newsletter-popup" tabindex="-1" aria-labelledby="newsletter-popup"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -393,25 +417,24 @@
     </div>
 
     @push('scripts')
+        <script>
+            document.addEventListener('livewire:init', () => {
+                Livewire.on('open-modal', (event) => {
+                    //
 
-    <script>
-        document.addEventListener('livewire:init', () => {
-           Livewire.on('open-modal', (event) => {
-               //
-               
-                // Get the modal element using querySelector or getElementsByClassName
-                var modalElement = document.querySelector('.resource-pop');
+                    // Get the modal element using querySelector or getElementsByClassName
+                    var modalElement = document.querySelector('.resource-pop');
 
-                // Create a new Bootstrap modal instance
-                var modal = new bootstrap.Modal(modalElement, {
-                    keyboard: false
+                    // Create a new Bootstrap modal instance
+                    var modal = new bootstrap.Modal(modalElement, {
+                        keyboard: false
+                    });
+
+                    // Show the modal
+                    modal.show();
                 });
-
-                // Show the modal
-                modal.show();
-           });
-        });
-    </script>
+            });
+        </script>
 
 
         <script>
