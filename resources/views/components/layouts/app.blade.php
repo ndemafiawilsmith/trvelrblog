@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="eng">
 
 <head>
 
@@ -18,15 +18,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
     <title>{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo-white.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-
-
-
-
-
 
 
     {{-- SEO  --}}
