@@ -15,15 +15,22 @@ class Index extends Component
             ->orderBy('published_at', 'desc')
             ->first();
 
-        // Get the next 4 trending blog posts, excluding the main blog
-        $trending = Post::where('status', 'published')
-            ->where('id', '!=', $mainBlog->id) // Exclude the main blog post
-            ->orderBy('published_at', 'desc')
-            ->take(4)
-            ->get();
+        // Ensure $mainBlog exists before using it
+        if ($mainBlog) {
+            $trending = Post::where('status', 'published')
+                ->where('id', '!=', $mainBlog->id) // Exclude the main blog post
+                ->orderBy('published_at', 'desc')
+                ->take(4)
+                ->get();
+        } else {
+            $trending = Post::where('status', 'published')
+                ->orderBy('published_at', 'desc')
+                ->take(4)
+                ->get(); // Get trending blogs without excluding any
+        }
 
-        // Get other blogs, excluding the main and trending blogs
-        $excludedIds = collect([$mainBlog->id])->merge($trending->pluck('id'))->toArray();
+        // Ensure $mainBlog is not null before accessing its ID
+        $excludedIds = collect($mainBlog ? [$mainBlog->id] : [])->merge($trending->pluck('id'))->toArray();
 
         $otherBlogs = Post::where('status', 'published')
             ->whereNotIn('id', $excludedIds) // Exclude already displayed blogs
