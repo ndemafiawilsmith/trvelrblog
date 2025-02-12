@@ -17,27 +17,27 @@
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
-    <title>{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}</title>
+    <title>{{ $title ?? '    DoraBlog - Your Gateway to African Travel Adventures'}}</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
     {{-- SEO  --}}
 
-    <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}">
-    <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
+    <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
+    <meta property="og:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://trvelr.com/">
-    <meta property="og:site_name" content="Trvelr Blog" />
+    <meta property="og:url" content="https://Dora.com/">
+    <meta property="og:site_name" content="Dora Blog" />
     <meta property="og:image" content="{{ asset('front-assets/img/favicon.png') }}">
 
 
-    <meta name="google:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
-    <meta name="google:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}">
+    <meta name="google:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
+    <meta name="google:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
     <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
-    <meta name="description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}" />
-    <meta name="author" content="{{ $author ?? 'Trvelr Blog Team' }}">
+    <meta name="description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}" />
+    <meta name="author" content="{{ $author ?? 'Dora Blog Team' }}">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
@@ -46,13 +46,13 @@
         {
           "@context": "https://schema.org",
           "@type": "Blog",
-          "name": "Trvelr Blog",
+          "name": "Dora Blog",
           "url": "https://orokoheritage.com",  // Replace with your blog's URL
-          "description": "Explore captivating travel stories, guides, and videos focused on Africa's 54 countries. Trvelr Blog empowers travel writers and adventurers to share their experiences and connect with a vibrant travel community.",
+          "description": "Explore captivating travel stories, guides, and videos focused on Africa's 54 countries. Dora Blog empowers travel writers and adventurers to share their experiences and connect with a vibrant travel community.",
           "image": "https://orokoheritage.com/assets/travel-africa.jpg",  // Replace with a featured image URL
           "publisher": {
             "@type": "Organization",
-            "name": "Trvelr Blog",
+            "name": "Dora Blog",
             "logo": {
               "@type": "ImageObject",
               "url": "https://orokoheritage.com/assets/logo.jpg"  // Replace with your logo URL
@@ -68,7 +68,7 @@
               "headline": "Discover the Best Travel Destinations in Africa",
               "author": {
                 "@type": "Person",
-                "name": "Trvelr Contributor"
+                "name": "Dora Contributor"
               },
               "datePublished": "2024-01-01",  // Replace with your post date
               "dateModified": "2024-01-01",  // Replace with your post modification date
@@ -76,7 +76,7 @@
               "articleBody": "This post covers the top destinations in Africa to help travelers plan their next adventure. Learn about diverse cultures, stunning landscapes, and rich histories.",
               "publisher": {
                 "@type": "Organization",
-                "name": "Trvelr Blog"
+                "name": "Dora Blog"
               }
             },
             {
@@ -84,7 +84,7 @@
               "headline": "How to Travel Safely Across African Countries",
               "author": {
                 "@type": "Person",
-                "name": "Trvelr Contributor"
+                "name": "Dora Contributor"
               },
               "datePublished": "2024-01-15",  // Replace with your post date
               "dateModified": "2024-01-15",  // Replace with your post modification date
@@ -92,7 +92,7 @@
               "articleBody": "This guide provides safety tips for traveling across Africa, including travel insurance advice, local etiquette, and choosing secure accommodations.",
               "publisher": {
                 "@type": "Organization",
-                "name": "Trvelr Blog"
+                "name": "Dora Blog"
               }
             }
           ]
@@ -593,7 +593,7 @@
         <div class="footer-wrap">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <p class="copyright-text">Copyrights © {{ Date('Y') }}<span> Trvelr.</span> All rights reserved<a
+                    <p class="copyright-text">Copyrights © {{ Date('Y') }}<span> Dora.</span> All rights reserved<a
                             href="https://hibootstrap.com/"></a></p>
                 </div>
                 <div class="col-lg-4 text-center">
