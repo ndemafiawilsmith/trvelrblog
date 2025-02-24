@@ -197,7 +197,7 @@
                         <div class="col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img trending">
-                                    <img src="{{ Storage::url($blog->featured_image) }}" alt="Iamge">
+                                    <img src="{{ Storage::url($blog->featured_image) }}" alt="Image">
                                     <a href="business.html" class="news-cat"id="newsCat">{{ $blog->tags[0] ?? 'Travel' }}</a>
 
 
@@ -270,7 +270,7 @@
                     </div>
                     <div class="col-md-5 text-md-end">
                         <a href="business.html" class="link-three">View All News<span><img
-                                    src="assets/img/icons/arrow-right.svg" alt="Iamge"></span></a>
+                                    src="assets/img/icons/arrow-right.svg" alt="Image"></span></a>
                     </div>
                 </div>
             </div>
@@ -480,7 +480,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-7.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-7.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -497,7 +497,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-8.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-8.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -514,7 +514,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-9.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-9.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -531,7 +531,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-10.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-10.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -548,7 +548,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-11.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-11.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -565,7 +565,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-12.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-12.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -582,7 +582,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-13.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-13.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -599,7 +599,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-14.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-14.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Politics</a>
                                 </div>
                                 <div class="news-card-info">
@@ -620,7 +620,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-90.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-90.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -637,7 +637,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-91.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-91.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -654,7 +654,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-92.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-92.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -671,7 +671,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-93.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-93.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -688,7 +688,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-94.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-94.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -705,7 +705,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-95.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-95.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -722,7 +722,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-96.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-96.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -739,7 +739,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-97.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-97.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Sports</a>
                                 </div>
                                 <div class="news-card-info">
@@ -760,7 +760,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-9.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-9.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -777,7 +777,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-10.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-10.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -794,7 +794,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-94.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-94.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -811,7 +811,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-95.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-95.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -828,7 +828,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-7.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-7.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -845,7 +845,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/politics/politics-8.webp" alt="Iamge">
+                                    <img src="assets/img/news/politics/politics-8.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -862,7 +862,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-96.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-96.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -879,7 +879,7 @@
                         <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
                             <div class="news-card-thirteen">
                                 <div class="news-card-img">
-                                    <img src="assets/img/news/news-97.webp" alt="Iamge">
+                                    <img src="assets/img/news/news-97.webp" alt="Image">
                                     <a href="business.html" class="news-cat">Business</a>
                                 </div>
                                 <div class="news-card-info">
@@ -913,7 +913,7 @@
                             </div>
                             <div class="col-md-5 text-md-end">
                                 <a href="business.html" class="link-three">View All News<span><img
-                                            src="assets/img/icons/arrow-right.svg" alt="Iamge"></span></a>
+                                            src="assets/img/icons/arrow-right.svg" alt="Image"></span></a>
                             </div>
                         </div>
                     </div>
@@ -967,7 +967,7 @@
                                     <img class="logo-light" src="assets/img/logo.png" alt="Image">
                                     <img class="logo-dark" src="assets/img/logo-white.png" alt="Image">
                                 </a>
-                                <p>Trvelr Blog is your ultimate destination for exploring Africa's 54 countries</p>
+                                <p>Dora Explora - Your Journey Begins Here.</p>
                                 <ul class="social-profile list-style">
                                     <li><a href="https://www.fb.com" target="_blank"><i
                                                 class="flaticon-facebook-1"></i></a></li>
@@ -1147,7 +1147,7 @@
                             </div>
                             <div class="col-md-5 text-md-end">
                                 <a href="business.html" class="link-three">View All News<span><img
-                                            src="assets/img/icons/arrow-right.svg" alt="Iamge"></span></a>
+                                            src="assets/img/icons/arrow-right.svg" alt="Image"></span></a>
                             </div>
                         </div>
                     </div>
@@ -1251,7 +1251,7 @@
                     </div>
                     <div class="col-md-5 text-md-end">
                         <a href="featured-video.html" class="link-three">View All Featured Video<span><img
-                                    src="assets/img/icons/arrow-right.svg" alt="Iamge"></span></a>
+                                    src="assets/img/icons/arrow-right.svg" alt="Image"></span></a>
                     </div>
                 </div>
             </div>
@@ -1364,7 +1364,7 @@
                     </div>
                     <div class="col-md-5 text-md-end">
                         <a href="business.html" class="link-three">View All News<span><img
-                                    src="assets/img/icons/arrow-right.svg" alt="Iamge"></span></a>
+                                    src="assets/img/icons/arrow-right.svg" alt="Image"></span></a>
                     </div>
                 </div>
             </div>

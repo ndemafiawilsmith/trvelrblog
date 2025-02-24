@@ -638,7 +638,7 @@
                     <div class="newsletter-content">
                         <img src="{{ asset('assets/img/newsletter-icon.webp') }}" alt="Image"
                             class="newsletter-icon">
-                        <h2>Join Our Newsletter & Read The New Posts First</h2>
+                        <h2>Joined Our Newsletter & Read The New Posts First</h2>
                         <form action="#" class="newsletter-form">
                             <input type="email" placeholder="Email Address">
                             <button type="button" class="btn-one">Subscribe<i
