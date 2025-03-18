@@ -64,6 +64,8 @@
         </style>
     @endpush --}}
 
+
+
     <div class="container">
         <div class="trending-box-two">
             <span>Trending</span>
@@ -122,6 +124,7 @@
             </div>
         </div>
     </div>
+    <x-aui::button>Hello There Youtube!</x-aui::button>
 
 
     <div class="container">

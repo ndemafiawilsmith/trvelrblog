@@ -99,10 +99,12 @@
         }
     </script> --}}
 
-    @livewireStyles
-    @stack('styles')
+
 </head>
 
+@livewireStyles
+@stack('styles')
+@vite('resources/css/app.css')
 <body>
 
     <div class="loader-wrapper">
@@ -120,189 +122,67 @@
     </div>
 
 
-    <div class="navbar-area header-three" id="navbar">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="{{route('Home')}}" style="width:152px; height:31px;">
-                    <img class="logo-light" src="{{ asset('assets/img/logo.png') }}" alt="logo">
-                    <img class="logo-dark" src="{{ asset('assets/img/logo-white.png') }}" alt="logo">
-                </a>
-                <button type="button" class="search-btn d-lg-none" data-bs-toggle="modal"
-                    data-bs-target="#searchModal">
-                    <i class="flaticon-loupe"></i>
-                </button>
-                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
-                    aria-controls="navbarOffcanvas">
-                    <span class="burger-menu">
-                        <span class="top-bar"></span>
-                        <span class="middle-bar"></span>
-                        <span class="bottom-bar"></span>
-                    </span>
-                </a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a href="{{route('Home')}}" class="nav-link active">
-                                Home
-                            </a>
-                        </li>
+    <header id="navbar" class="navbar-area header-three shadow-md relative top-0 left-0 w-full z-50">
+        <div class="container px-4">
+            <nav class="flex justify-between items-center py-2">
 
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                Destinations
-                            </a>
-                            @php
-                                use App\Models\Category;
-                                $categories = Category::all();
-                            @endphp
-                            <ul class="dropdown-menu">
-                                @foreach ($categories as $category)
-                                    <li class="nav-item">
-                                        <a href="{{route('byCategory', ['slug'=>$category->slug])}}" class="nav-link">
-                                            {{$category->name}}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-
-                        {{-- <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                Travel by Month
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="business.html" class="nav-link">
-                                        January
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="business-details.html" class="nav-link">
-                                        February
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> --}}
-
-                        {{-- <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link">
-                                Itineraries
-                            </a>
-                        </li> --}}
-
-
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link">
-                                Tour Marketplace
-                            </a>
-                        </li>
-                        {{--
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                Video
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="featured-video.html" class="nav-link">
-                                        Featured Video
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="featured-video-details.html" class="nav-link">
-                                        Featured Video Details
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                Sports
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="sports.html" class="nav-link">
-                                        Sports News
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="sports-details.html" class="nav-link">
-                                        Sports News Details
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
-                                Shop
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="shop-grid.html" class="nav-link">
-                                        Shop Grid
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="shop-left-sidebar.html" class="nav-link">
-                                        Shop Left Sidebar
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="shop-right-sidebar.html" class="nav-link">
-                                        Shop Right Sidebar
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="shop-details.html" class="nav-link">
-                                        Shop Details
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="cart.html" class="nav-link">
-                                        Cart
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="wishlist.html" class="nav-link">
-                                        Wishlist
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="checkout.html" class="nav-link">
-                                        Checkout
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="login.html" class="nav-link">
-                                        Login
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="signup.html" class="nav-link">
-                                        Sign Up
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> --}}
-                    </ul>
-                    <div class="others-option d-flex align-items-center">
-                        {{-- <div class="option-item">
-                            <a class="shopcart" href="cart.html"><i class="flaticon-shopping-cart"></i>
-                                <span>5</span></a>
-                        </div> --}}
-                        <div class="option-item">
-                            <button type="button" class="search-btn" data-bs-toggle="modal"
-                                data-bs-target="#searchModal">
-                                <i class="flaticon-loupe"></i>
-                            </button>
-                        </div>
-                        <div class="option-item">
-                            <a href="/admin/login" class="btn-two">Share your story</a>
-                        </div>
-                    </div>
+                <!-- Logo -->
+                <div class="logo flex-shrink-0">
+                    <a href="{{ route('Home') }}" class="flex items-center">
+                        <img class="logo-light w-36" src="{{ asset('assets/img/logo.png') }}" alt="logo">
+                        <img class="logo-dark w-36 hidden" src="{{ asset('assets/img/logo-white.png') }}" alt="logo">
+                    </a>
                 </div>
+
+
+
+                <!-- Search Form -->
+                <div class="relative w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg hidden md:flex ">
+                    <form class="w-full">
+                        <div class="relative">
+                            <i class="fi fi-rr-search search-icon absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            <input type="text"
+                                class="w-full pl-10 pr-4 py-2 rounded-md border-0 bg-transparent text-gray-600
+           shadow-[0_0_0_1px_#3a3b47,0_0_10px_-8px_#000]
+           focus:shadow-[0_0_0_2px_#3f404e]
+           hover:shadow-[0_0_0_1.5px_#3f404e,0px_0px_15px_-10px_#000]
+           outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)]
+           focus:ring-0 placeholder-gray-400"
+                                placeholder="Places to explore...">
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Become a Guide Button -->
+                <div class="lg:flex justify-center items-center md:flex hidden">
+                    <a href="/admin/login" class="btn-two px-6 py-3 rounded-lg transition font-bold">
+                        Create a Tour
+                    </a>
+                </div>
+
+
+
+                <div class="navbar  d-lg-none md:hidden">
+                    <div class="navbar-area">
+                        <button type="button" class="search-btn" data-bs-toggle="modal"
+                            data-bs-target="#searchModal">
+                            <i class="flaticon-loupe"></i>
+                        </button>
+                    </div>
+                    <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                        aria-controls="navbarOffcanvas">
+                        <span class="burger-menu">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </span>
+                    </a>
+                </div>
+
             </nav>
         </div>
-    </div>
+    </header>
 
 
     <div class="responsive-navbar offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1"
@@ -625,36 +505,12 @@
         <i class="ri-arrow-up-line"></i>
     </button>
 
-    {{-- <div class="modal fade" id="newsletter-popup" tabindex="-1" aria-labelledby="newsletter-popup"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-                <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close"
-                    onclick="closeModal()">
-                    <i class="fi fi-rr-cross"></i>
-                </button>
-                <div class="modal-body">
-                    <div class="newsletter-bg bg-f"></div>
-                    <div class="newsletter-content">
-                        <img src="{{ asset('assets/img/newsletter-icon.webp') }}" alt="Image"
-                            class="newsletter-icon">
-                        <h2>Joined Our Newsletter & Read The New Posts First</h2>
-                        <form action="#" class="newsletter-form">
-                            <input type="email" placeholder="Email Address">
-                            <button type="button" class="btn-one">Subscribe<i
-                                    class="flaticon-arrow-right"></i></button>
-                        </form>
-                        <div class="form-check checkbox">
-                            <input class="form-check-input" type="checkbox" id="test_20">
-                            <label class="form-check-label" for="test_20">
-                                I've read and accept <a href="privacy-policy.html">Privacy Policy</a>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
+
+
+
+
+
+
 
 
     @livewireScripts
@@ -669,3 +525,29 @@
 </body>
 
 </html>
+
+
+import defaultTheme from 'tailwindcss/defaultTheme';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './app/View/Components/**/*.php',
+        './storage/framework/views/*.php',
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './resources/**/*.vue',
+    ],
+    presets: [
+        require('./vendor/yungifez/artisan-ui/tailwind.config.js'),
+      ],
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+        },
+    },
+    plugins: [],
+};
