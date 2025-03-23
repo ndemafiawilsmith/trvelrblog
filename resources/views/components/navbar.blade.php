@@ -1,22 +1,46 @@
-<!-- resources/views/components/navbar.blade.php -->
 @php
-    use Luvi\Components\Button;
-    use Luvi\Components\Input;
+use Luvi\Components\Button;
+use Luvi\Components\Input;
 @endphp
 
-<nav class="bg-white shadow-md p-4 flex items-center justify-between">
+<nav class="bg-white shadow-md top-0 left-0 w-full p-3 transition-all duration-500 ease-in-out transform flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="">
-     <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
+    <a href="/" class="flex items-center">
+        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
     </a>
 
-    <!-- Search Bar -->
-    <div class="flex-grow mx-4">
-        <x-input type="text" placeholder="Search..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-200" />
-    </div>
-
     <!-- Call-to-Action Button -->
-    <x-button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-        Get Started
-    </x-button>
+    <div class="flex items-center space-x-4 relative" >
+        <!-- Dropdown Button -->
+       <flux:dropdown>
+    <flux:button icon="user" class="no-flux-style"></flux:button>
+
+    <flux:menu>
+        <flux:menu.item icon="plus">New post</flux:menu.item>
+
+        <flux:menu.separator />
+
+        <flux:menu.submenu heading="Sort by">
+            <flux:menu.radio.group>
+                <flux:menu.radio checked>Name</flux:menu.radio>
+                <flux:menu.radio>Date</flux:menu.radio>
+                <flux:menu.radio>Popularity</flux:menu.radio>
+            </flux:menu.radio.group>
+        </flux:menu.submenu>
+
+        <flux:menu.submenu heading="Filter">
+            <flux:menu.checkbox checked>Draft</flux:menu.checkbox>
+            <flux:menu.checkbox checked>Published</flux:menu.checkbox>
+            <flux:menu.checkbox>Archived</flux:menu.checkbox>
+        </flux:menu.submenu>
+
+        <flux:menu.separator />
+
+        <flux:menu.item variant="danger" icon="trash">Delete</flux:menu.item>
+    </flux:menu>
+</flux:dropdown>        <!-- Get Started Button -->
+        <flux:button class="">
+            <a href="/get-started" class='text-sm'>Share Your Story</a>
+        </flux:button>
+    </div>
 </nav>

@@ -42,9 +42,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
+    {{-- scripts --}}
+
+ {{-- @fluxAppearance --}}
     @livewireStyles
     @stack('styles')
     @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
+
+
+
+    
 </head>
 
 
@@ -54,90 +63,22 @@
     <header>
         @include('components.navbar') <!-- Include the navbar component -->
     </header>
-    
-    <div id="app">
-        {{-- @include('components.layouts.header')
+
+ <main class="container mx-auto mt-6 relative">
         @yield('content')
-        @include('components.layouts.footer') --}}
-
-        <h1 class="text-3xl">Hello World</h1>
-        <div>
-        <x-typography.h1> Here is Edward Bear, </x-typography.h1>
-        <x-typography.p>
-            coming downstairs now, bump, bump, bump...
-        </x-typography.p>
-        <x-typography.blockquote>
-            "You can't stay in your corner of the forest..."
-        </x-typography.blockquote>
-    </div>
-
-<x-avatar>
-    <x-avatar.image
-        src="https://github.com/shadcn.png"
-        alt="@shadcn"
-    />
-    <x-avatar.fallback>CN</x-avatar.fallback>
-</x-avatar>
-<x-button variant="secondary" class="bg-green-700 text-white">Secondary</x-button>
-
-
-<x-dialog>
-    <x-dialog.trigger>Open</x-dialog.trigger>
-    <x-dialog.content>
-        <x-dialog.header>
-            <x-dialog.title>Are you absolutely sure?</x-dialog.title>
-            <x-dialog.description>
-                This action cannot be undone. This will permanently delete your account
-                and remove your data from our servers.
-            </x-dialog.description>
-        </x-dialog.header>
-    </x-dialog.content>
-</x-dialog>
-
-<x-card class="w-[350px]">
-    <x-card.header>
-        <x-card.title>Create project</x-card.title>
-        <x-card.description>Deploy your new project in one-click.</x-card.description>
-    </x-card.header>
-    <x-card.content>
-        <form>
-            <div class="grid w-full items-center gap-4">
-                <div class="flex flex-col space-y-1.5">
-                    <x-label htmlfor="name">Name</x-label>
-                    <x-input
-                        id="name"
-                        placeholder="name of your project"
-                    />
-                </div>
-                <div class="flex flex-col space-y-1.5">
-                    <x-label htmlfor="framework">Framework</x-label>
-                    <x-select id="framework">
-                        <option
-                            disabled
-                            selected
-                            value=""
-                        >
-                            Select
-                        </option>
-                        <option value="next">Next.js</option>
-                        <option value="sveltekit">SvelteKit</option>
-                        <option value="astro">Astro</option>
-                        <option value="nuxt">Nuxt.js</option>
-                    </x-select>
-                </div>
-            </div>
-        </form>
-    </x-card.content>
-    <x-card.footer class="flex justify-between">
-        <x-button variant="outline">Cancel</x-button>
-        <x-button>Deploy</x-button>
-    </x-card.footer>
-</x-card>
-
+    </main>
 
     </div>
+
+
+
+
+
+    {{-- scripts --}}
+     @fluxScripts
     @livewireScripts
     @stack('scripts')
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
     </script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
