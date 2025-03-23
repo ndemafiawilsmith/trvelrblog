@@ -8,7 +8,7 @@
     [data-flux-button] {
         @apply bg-[#1E1E1E] text-[#00FF45] px-7 py-4 rounded-lg
                hover:bg-[#00FF45] hover:text-[#1E1E1E]
-               border border-[#1E1E1E] !important;
+               border border-[#1E1E1E] transition-all duration-100 ease-in-out !important;
     }
     .no-flux-style {
         @apply bg-white border-none text-[#1e1e1e60] hover:bg-none !important;

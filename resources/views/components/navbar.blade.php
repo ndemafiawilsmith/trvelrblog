@@ -3,42 +3,65 @@ use Luvi\Components\Button;
 use Luvi\Components\Input;
 @endphp
 
-<nav class="bg-white shadow-md top-0 left-0 w-full p-3 transition-all duration-500 ease-in-out transform flex items-center justify-between">
+<nav class="bg-[#F9F9F9] shadow-md top-0 left-0 w-full p-3 transition-all duration-500 ease-in-out transform flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center">
-        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
-    </a>
+    <div class="flex">
+        <a href="/" class="flex items-center">
+            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
+        </a>
+        <flux:navbar class="!p-1">
+            <flux:navbar.item href="#">Discover</flux:navbar.item>
+            <flux:navbar.item href="#">Travelers's Stories</flux:navbar.item>
+        </flux:navbar>
+    </div>
 
     <!-- Call-to-Action Button -->
-    <div class="flex items-center space-x-4 relative" >
+    <div class="flex items-center space-x-3 relative">
         <!-- Dropdown Button -->
-       <flux:dropdown>
-    <flux:button icon="user" class="no-flux-style"></flux:button>
+        <flux:dropdown class="!bg-white !rounded-lg">
+            <flux:button icon="globe-europe-africa" class="!bg-transparent !border-none !px-2" />
 
-    <flux:menu>
-        <flux:menu.item icon="plus">New post</flux:menu.item>
+            <flux:navmenu class="max-w-[12rem]">
+                <div class="px-2 py-1.5">
+                    <flux:text size="sm">No country yet</flux:text>
+                </div>
+            </flux:navmenu>
+        </flux:dropdown>
 
-        <flux:menu.separator />
 
-        <flux:menu.submenu heading="Sort by">
-            <flux:menu.radio.group>
-                <flux:menu.radio checked>Name</flux:menu.radio>
-                <flux:menu.radio>Date</flux:menu.radio>
-                <flux:menu.radio>Popularity</flux:menu.radio>
-            </flux:menu.radio.group>
-        </flux:menu.submenu>
+        <flux:dropdown align="end" class="!bg-white !rounded-lg">
 
-        <flux:menu.submenu heading="Filter">
-            <flux:menu.checkbox checked>Draft</flux:menu.checkbox>
-            <flux:menu.checkbox checked>Published</flux:menu.checkbox>
-            <flux:menu.checkbox>Archived</flux:menu.checkbox>
-        </flux:menu.submenu>
 
-        <flux:menu.separator />
 
-        <flux:menu.item variant="danger" icon="trash">Delete</flux:menu.item>
-    </flux:menu>
-</flux:dropdown>        <!-- Get Started Button -->
+            <flux:profile circle name="Arizon" size="xs" avatar="https://unavatar.io/x/calebporzio" />
+
+            <flux:navmenu class="max-w-[12rem]">
+                <div class="px-2 py-1.5">
+                    <flux:text size="sm">Signed in as</flux:text>
+                    <flux:heading class="mt-1! truncate">caleb@example.com</flux:heading>
+                </div>
+
+                <flux:navmenu.separator />
+
+                <div class="px-2 py-1.5">
+                    <flux:text size="sm" class="pl-7">Teams</flux:text>
+                </div>
+
+                <flux:navmenu.item href="#" icon="check" class="text-zinc-800 dark:text-white truncate">Personal</flux:navmenu.item>
+                <flux:navmenu.item href="#" indent class="text-zinc-800 dark:text-white truncate">Wireable LLC</flux:navmenu.item>
+
+                <flux:navmenu.separator />
+
+                <flux:navmenu.item href="/dashboard" icon="key" class="text-zinc-800 dark:text-white">Licenses</flux:navmenu.item>
+                <flux:navmenu.item href="/account" icon="user" class="text-zinc-800 dark:text-white">Account</flux:navmenu.item>
+
+                <flux:navmenu.separator />
+
+                <flux:navmenu.item href="/logout" icon="arrow-right-start-on-rectangle" class="text-zinc-800 dark:text-white">Logout</flux:navmenu.item>
+            </flux:navmenu>
+        </flux:dropdown>
+
+        <!-- Get Started Button -->
         <flux:button class="">
             <a href="/get-started" class='text-sm'>Share Your Story</a>
         </flux:button>

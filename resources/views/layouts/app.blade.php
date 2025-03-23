@@ -53,7 +53,7 @@
 
 
 
-    
+
 </head>
 
 
@@ -86,5 +86,10 @@
     <script src="{{ asset('assets/js/fslightbox.js') }}"></script>
     <script src="{{ asset('assets/js/aos.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+
 </body>
 </html>
