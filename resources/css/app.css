@@ -10,10 +10,22 @@
                hover:bg-[#00FF45] hover:text-[#1E1E1E]
                border border-[#1E1E1E] transition-all duration-100 ease-in-out !important;
     }
-    .no-flux-style {
+    /* .no-flux-style {
         @apply bg-white border-none text-[#1e1e1e60] hover:bg-none !important;
-    }
+    } */
 }
 
+
+.no-flux-style{
+    background-color: white;
+    border: none;
+    color: #1e1e1e60;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 100%;
+}
+.no-flux-style:hover{
+    background-color: none;
+}
 
 

@@ -4,15 +4,10 @@ use App\Livewire\Blog\ByCategory;
 use App\Livewire\Front\BlogDetail;
 use App\Livewire\Front\Index;
 use App\Livewire\Marketplace;
+
+use App\Livewire\Landing;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
+Route::get('/', Landing::class);
 
-
-Route::view('/', 'pages.home')->name('home');
-Route::view('/marketplace', 'pages.marketplace')->name('marketplace');
-// Route::view('/about', 'pages.about')->name('about');
-// Route::view('/contact', 'pages.contact')->name('contact');

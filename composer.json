@@ -17,6 +17,7 @@
         "luvi-ui/laravel-luvi": "^0.5.3",
         "mallardduck/blade-lucide-icons": "^1.23",
         "spatie/laravel-activitylog": "^4.9",
+        "wireui/wireui": "^2.4",
         "yungifez/artisan-ui": "^0.0.5"
     },
     "require-dev": {

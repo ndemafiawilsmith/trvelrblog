@@ -44,41 +44,37 @@
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
+    <!-- Add this inside your `<head>` section -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     {{-- scripts --}}
 
- {{-- @fluxAppearance --}}
+    {{-- @fluxAppearance --}}
     @livewireStyles
     @stack('styles')
     @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
 
 
-
-
+    <wireui:scripts />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/@alpinejs/focus@3.10.3/dist/cdn.min.js" defer></script>
 </head>
 
-
-
 <body>
-
-    <header>
-        @include('components.navbar') <!-- Include the navbar component -->
-    </header>
-
- <main class="container mx-auto mt-6 relative">
-        @yield('content')
-    </main>
-
-    </div>
+    <livewire:navbar />
+    {{ $slot }}
 
 
 
 
 
     {{-- scripts --}}
-     @fluxScripts
+    @fluxScripts
     @livewireScripts
+    @wireUiScripts
+
     @stack('scripts')
-     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
     </script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
@@ -87,9 +83,10 @@
     <script src="{{ asset('assets/js/aos.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-    lucide.createIcons();
-</script>
+    <script>
+        lucide.createIcons();
+
+    </script>
 
 </body>
 </html>

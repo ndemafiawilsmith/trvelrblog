@@ -1,3 +1,4 @@
+
 @php
 use Luvi\Components\Button;
 use Luvi\Components\Input;
@@ -18,8 +19,11 @@ use Luvi\Components\Input;
     <!-- Call-to-Action Button -->
     <div class="flex items-center space-x-3 relative">
         <!-- Dropdown Button -->
-        <flux:dropdown class="!bg-white !rounded-lg">
-            <flux:button icon="globe-europe-africa" class="!bg-transparent !border-none !px-2" />
+        <flux:dropdown class="!bg-white ">
+            <flux:button icon="globe-alt" class="no-flux-style " variant="outline" />
+
+
+
 
             <flux:navmenu class="max-w-[12rem]">
                 <div class="px-2 py-1.5">
@@ -27,6 +31,12 @@ use Luvi\Components\Input;
                 </div>
             </flux:navmenu>
         </flux:dropdown>
+{{--
+        <x-dropdown icon="globe-alt" class="">
+            <x-dropdown.item label="Settings" />
+            <x-dropdown.item label="My Profile" />
+            <x-dropdown.item label="Logout" />
+        </x-dropdown> --}}
 
 
         <flux:dropdown align="end" class="!bg-white !rounded-lg">
@@ -67,3 +77,5 @@ use Luvi\Components\Input;
         </flux:button>
     </div>
 </nav>
+
+

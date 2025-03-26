@@ -947,23 +947,11 @@ select {
 }
 
 .section-title-two {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
+    padding-bottom: .7em;
     position: relative
 }
 
-.section-title-two:after {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    content: "";
-    width: 88px;
-    height: 3px;
-    background-color: var(--secondaryColor)
-}
-
 .section-title-two h2 {
-    font-size: 36px;
     line-height: 30px
 }
 
@@ -1566,7 +1554,7 @@ select {
 }
 
 .featured-slider .news-card-one .news-card-info h3 {
-    font-size: 16px;
+    /* font-size: .7em; */
     line-height: 24px;
     margin-bottom: 13px
 }
@@ -2482,7 +2470,8 @@ select {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 1px;
-    transition: background-size .7s
+    transition: background-size .7s;
+    font-size: .8em;
 }
 
 .news-card-one h3 a:hover,
@@ -6224,7 +6213,6 @@ article {
     font-size: 17px
 }
 
-/* From Uiverse.io by LightAndy1 */ 
+/* From Uiverse.io by LightAndy1 */
 
-  
-  
+

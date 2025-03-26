@@ -9,6 +9,10 @@ export default {
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
         "./app/Services/**/*.php",
+        "./vendor/wireui/wireui/src/*.php",
+        "./vendor/wireui/wireui/ts/**/*.ts",
+        "./vendor/wireui/wireui/src/WireUi/**/*.php",
+        "./vendor/wireui/wireui/src/Components/**/*.php",
     ],
 
     theme: {
