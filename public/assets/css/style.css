@@ -4,14 +4,14 @@
     --bodyFont: "Roboto", sans-serif;
     --secondaryFont: "Poppins", sans-serif;
     --primaryColor: #222222;
-    --secondaryColor: #086233;
+    --secondaryColor: #1E1E1E;
     --paraColor: #555555;
     --optionalColor: #888888;
     --bgColor: #F6F6F6;
     --bgColorTwo: #240135;
     --grayColor: #F8F8F8;
     --blackColor: #190B32;
-    --whiteColor: #ffffff;
+    --whiteColor: #00FF45;
     --offwhiteColor: #ccc;
     --footerColor: #02161A;
     --yellowColor: #FFCB36;
@@ -528,8 +528,8 @@ select {
     z-index: 1;
     border: none;
     line-height: 1;
-    padding: 16px 27px 21px;
-    border-radius: 5px;
+    /* padding: 10px 16px 10px; */
+    border-radius: 8px;
     font-family: var(--secondaryFont);
     overflow: hidden;
     white-space: nowrap
@@ -555,14 +555,14 @@ select {
 .btn-three:before,
 .btn-four:before,
 .btn-five:before {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0%;
     content: "";
     width: 50.5%;
     height: 0%;
     z-index: -1;
-    transition: var(--transition)
+    transition: var(--transition) */
 }
 
 .btn-one:after,
@@ -570,7 +570,7 @@ select {
 .btn-three:after,
 .btn-four:after,
 .btn-five:after {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     right: 0%;
     content: "";
@@ -579,22 +579,14 @@ select {
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    transition: var(--transition)
+    transition: var(--transition) */
 }
 
-.btn-one:hover:after,
-.btn-one:hover:before,
-.btn-two:hover:after,
-.btn-two:hover:before,
-.btn-three:hover:after,
-.btn-three:hover:before,
-.btn-four:hover:after,
-.btn-four:hover:before,
-.btn-five:hover:after,
-.btn-five:hover:before {
-    height: 100%;
-    visibility: visible;
-    opacity: 1
+.btn-two:hover
+ {
+    background-color: var(--whiteColor);
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor)
 }
 
 .btn-one {
@@ -612,7 +604,7 @@ select {
 
 .btn-two {
     color: var(--whiteColor);
-    background-color: var(--secondaryColor)
+    background-color: var(--secondaryColor);
 }
 
 .btn-two:before {
@@ -955,23 +947,11 @@ select {
 }
 
 .section-title-two {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
+    padding-bottom: .7em;
     position: relative
 }
 
-.section-title-two:after {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    content: "";
-    width: 88px;
-    height: 3px;
-    background-color: var(--secondaryColor)
-}
-
 .section-title-two h2 {
-    font-size: 36px;
     line-height: 30px
 }
 
@@ -1574,7 +1554,7 @@ select {
 }
 
 .featured-slider .news-card-one .news-card-info h3 {
-    font-size: 16px;
+    /* font-size: .7em; */
     line-height: 24px;
     margin-bottom: 13px
 }
@@ -2490,7 +2470,8 @@ select {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 1px;
-    transition: background-size .7s
+    transition: background-size .7s;
+    font-size: .8em;
 }
 
 .news-card-one h3 a:hover,
@@ -6231,3 +6212,7 @@ article {
     margin-left: 5px;
     font-size: 17px
 }
+
+/* From Uiverse.io by LightAndy1 */
+
+

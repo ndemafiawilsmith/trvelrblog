@@ -1,0 +1,107 @@
+  <h1>Welcome to Home Page</h1>
+
+    <div id="app">
+        {{-- @include('components.layouts.header')
+        @yield('content')
+        @include('components.layouts.footer') --}}
+
+        <h1 class="text-3xl">Hello World</h1>
+        <div>
+        <x-typography.h1> Here is Edward Bear, </x-typography.h1>
+        <x-typography.p>
+            coming downstairs now, bump, bump, bump...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet faucibus molestie. Sed nec mi eu risus gravida imperdiet quis ut magna. Fusce nisl eros, lobortis eget arcu at, vulputate venenatis odio. Nam bibendum ultricies vehicula. Praesent egestas at quam eget molestie. Aliquam sed velit imperdiet diam porta rutrum. Integer bibendum fermentum mollis. Vivamus condimentum cursus felis non consequat. Curabitur ut placerat turpis. Vestibulum porta laoreet varius. Morbi molestie ultricies enim, vitae accumsan lacus vehicula eget. Curabitur interdum sem ut ornare congue. Proin id nisl eget eros pulvinar ultricies quis sed arcu. Nullam nec posuere velit. Duis efficitur dolor sit amet condimentum bibendum.
+
+Vestibulum et nulla sit amet lorem bibendum molestie. Sed et felis eu sem cursus faucibus. Proin vehicula justo dui, in mattis eros porttitor vitae. Aliquam vehicula purus mi, a pretium sem molestie in. Maecenas varius nisi eget luctus dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin volutpat, dui non iaculis efficitur, mauris eros dapibus enim, ac aliquam sem turpis ac nunc. Ut efficitur, sem eget euismod lacinia, ante dui tincidunt dui, vel placerat metus est in sem. Curabitur volutpat sollicitudin lectus et congue. Phasellus velit lacus, pulvinar quis velit sit amet, imperdiet lobortis nisi. Sed eu risus feugiat nisi laoreet auctor. Integer at pretium massa.
+
+Proin velit quam, placerat in risus et, lobortis consectetur tortor. Aliquam ut viverra nibh, in interdum leo. Cras cursus quis tellus id semper. Suspendisse egestas sit amet felis eget mollis. Proin mauris justo, luctus in lectus at, malesuada ornare libero. Sed varius est in enim ultricies, in elementum mi molestie. Maecenas aliquam, leo hendrerit vulputate viverra, arcu leo eleifend urna, vitae laoreet augue justo eget ipsum. Nam metus erat, porttitor id ligula ac, condimentum finibus augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras tincidunt cursus sapien, non malesuada eros pretium ac.
+
+Nullam porta ullamcorper libero, ac congue velit vestibulum a. Sed malesuada felis enim, eu sodales nisi pellentesque at. Phasellus elementum venenatis leo, ut efficitur arcu bibendum ut. Vivamus posuere ac magna eu blandit. Suspendisse convallis sem at purus tempus pulvinar. Aliquam sit amet ultricies tortor. Maecenas pretium quis orci sed ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Proin et ex luctus, posuere diam at, feugiat ex. Mauris posuere elit et vehicula vehicula. Fusce vel odio id lacus tristique fermentum sed ut metus. Aenean imperdiet felis molestie placerat fermentum. Sed accumsan pellentesque aliquet. Morbi id enim sapien. Nulla vel erat justo. Maecenas risus lectus, feugiat ac dictum ac, hendrerit sed mauris. Duis luctus, nulla non scelerisque finibus, nulla ante sodales lectus, lacinia viverra felis mauris eget quam. Praesent non eros bibendum, sollicitudin sapien sed, volutpat lacus. Proin maximus pulvinar bibendum. Curabitur massa tellus, tristique sit amet imperdiet et, imperdiet ut massa. Nunc convallis odio non congue mattis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </x-typography.p>
+        <x-typography.blockquote>
+            "You can't stay in your corner of the forest..."
+        </x-typography.blockquote>
+    </div>
+
+<x-avatar>
+    <x-avatar.image
+        src="https://github.com/shadcn.png"
+        alt="@shadcn"
+    />
+    <x-avatar.fallback>CN</x-avatar.fallback>
+</x-avatar>
+<x-button variant="secondary" class="bg-green-700 text-white">Secondary</x-button>
+
+
+<x-dialog>
+    <x-dialog.trigger>Open</x-dialog.trigger>
+    <x-dialog.content>
+        <x-dialog.header>
+            <x-dialog.title>Are you absolutely sure?</x-dialog.title>
+            <x-dialog.description>
+                This action cannot be undone. This will permanently delete your account
+                and remove your data from our servers.
+            </x-dialog.description>
+        </x-dialog.header>
+    </x-dialog.content>
+</x-dialog>
+
+<x-card class="w-[350px]">
+    <x-card.header>
+        <x-card.title>Create project</x-card.title>
+        <x-card.description>Deploy your new project in one-click.</x-card.description>
+    </x-card.header>
+    <x-card.content>
+        <form>
+            <div class="grid w-full items-center gap-4">
+                <div class="flex flex-col space-y-1.5">
+                    <x-label htmlfor="name">Name</x-label>
+                    <x-input
+                        id="name"
+                        placeholder="name of your project"
+                    />
+                </div>
+                <div class="flex flex-col space-y-1.5">
+                    <x-label htmlfor="framework">Framework</x-label>
+                    <x-select id="framework">
+                        <option
+                            disabled
+                            selected
+                            value=""
+                        >
+                            Select
+                        </option>
+                        <option value="next">Next.js</option>
+                        <option value="sveltekit">SvelteKit</option>
+                        <option value="astro">Astro</option>
+                        <option value="nuxt">Nuxt.js</option>
+                    </x-select>
+                </div>
+            </div>
+        </form>
+    </x-card.content>
+    <x-card.footer class="flex justify-between">
+        <x-button variant="outline">Cancel</x-button>
+        <x-button>Deploy</x-button>
+    </x-card.footer>
+</x-card>
+
+
+x-data="{ lastScroll: 0, visible: true }" x-init="
+        document.addEventListener('DOMContentLoaded', () => {
+            window.addEventListener('scroll', () => {
+                let currentScroll = window.pageYOffset;
+                visible = currentScroll < lastScroll || currentScroll < 10;
+                lastScroll = currentScroll;
+            });
+        });
+    " x-show="visible" class="bg-white shadow-md  top-0 left-0 w-full p-3 transition-all duration-500 ease-in-out transform flex items-center justify-between" :class="visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'"
+
+
+     <x-dropdown-menu.trigger variant="outline" @click="open = !open">
+                Open
+            </x-dropdown-menu.trigger>
+
+            <x-dropdown-menu.content class="w-56 absolute right-0 top-12 transition-all duration-300" x-show="open" @click.away="open = false">

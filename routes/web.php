@@ -3,15 +3,11 @@
 use App\Livewire\Blog\ByCategory;
 use App\Livewire\Front\BlogDetail;
 use App\Livewire\Front\Index;
-use App\Livewire\Register;
+use App\Livewire\Marketplace;
+
+use App\Livewire\Landing;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
+Route::get('/', Landing::class);
 
-
-Route::get('/', Index::class)->name('Home');
-Route::get('/article/{id?}', BlogDetail::class)->name('blog.detail');
-Route::get('/category/{slug}', ByCategory::class)->name('byCategory');
