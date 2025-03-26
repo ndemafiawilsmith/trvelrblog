@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
     <title>{{ $title ?? '    DoraBlog - Your Gateway to African Travel Adventures' }}</title>
+    <title>{{ $title ?? '    Dora Blog - Your Gateway to African Travel Adventures'}}</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -42,11 +43,14 @@
             font-family: 'dora', sans-serif;
         }
     </style>
-
     <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures' }}">
     <meta property="og:description"
         content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
     {{-- >>>>>>> 95b2771 (Fix) --}}
+    <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}">
+    <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
+    <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
+    <meta property="og:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://Dora.com/">
@@ -60,6 +64,10 @@
     <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
     <meta name="description"
         content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}" />
+    <meta name="google:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
+    <meta name="google:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
+    <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
+    <meta name="description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}" />
     <meta name="author" content="{{ $author ?? 'Dora Blog Team' }}">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,6 +79,8 @@
     <!-- Add this inside your `<head>` section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     {{-- scripts --}}
 
@@ -98,6 +108,8 @@
                 <div class="col-lg-4">
                     <p class="copyright-text">Copyrights © {{ Date('Y') }}<span> Trvelr.</span> All rights
                         reserved<a href="https://hibootstrap.com/"></a></p>
+                    <p class="copyright-text">Copyrights © {{ Date('Y') }}<span> Dora.</span> All rights reserved<a
+                            href="https://hibootstrap.com/"></a></p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <ul class="social-profile list-style">
@@ -122,6 +134,9 @@
                                     fill="#033A35"></path>
                             </svg>
                         </button>
+                        <button class="subscribe-btn" data-bs-toggle="modal"
+                            data-bs-target="#newsletter-popup">Become a subscriber<i
+                                class="flaticon-right-arrow"></i></button>
                         <p>Get all the latest posts delivered straight to your inbox.</p>
                     </div>
                 </div>
@@ -152,4 +167,7 @@
 
 </body>
 
+    </script>
+
+</body>
 </html>
