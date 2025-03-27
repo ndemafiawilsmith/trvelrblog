@@ -1,41 +1,50 @@
 <!-- resources/views/pages/home.blade.php -->
 
-<div class="">
-    <div class="relative w-full h-[500px]">
-        <!-- Swiper Container -->
-        <swiper-container class="mySwiper w-full h-full" pagination="true" pagination-clickable="true" navigation="false" space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+ <div class="">
+<div class="relative w-full h-[500px]">
+    <!-- Swiper Container -->
+    <swiper-container class="mySwiper w-full h-full" pagination="true" pagination-clickable="true" navigation="false"
+        space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false"
+        style="--swiper-pagination-color: #00FF45;">
+
+        @foreach($slides as $slide)
             <swiper-slide class="relative">
-                <img src="/path-to-your-image1.jpg" alt="Slide 1" class="w-full h-full object-cover">
+                <!-- Image Wrapper with Dim Effect -->
+                <div class="w-full h-full relative">
+                    <img src="{{ $slide['image'] }}" alt="Slide Image" class="w-full h-full object-cover brightness-50">
+                </div>
             </swiper-slide>
-            <swiper-slide class="relative">
-                <img src="/path-to-your-image2.jpg" alt="Slide 2" class="w-full h-full object-cover">
-            </swiper-slide>
-            <swiper-slide class="relative">
-                <img src="/path-to-your-image3.jpg" alt="Slide 3" class="w-full h-full object-cover">
-            </swiper-slide>
-        </swiper-container>
+        @endforeach
 
-        <!-- Overlay Content -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 bg-black/50">
-            <x-typography.h2 class="text-center text-3xl sm:text-4xl lg:text-5xl font-bold border-none">
-                Find your perfect <span class="uppercase text-[#00FF45]">Adventures</span>
-            </x-typography.h2>
+    </swiper-container>
 
-            <x-typography.p class="text-center text-gray-300 mt-2">
-                Where will your next journey take you?
-            </x-typography.p>
+    <!-- Fixed Overlay Content (Without Black Background) -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10">
+        <x-typography.h2 class="text-white text-center text-3xl sm:text-4xl lg:text-5xl font-bold border-none">
+            Find your perfect <span class="uppercase text-[#00FF45]">Adventures</span>
+        </x-typography.h2>
 
-            <div class="flex justify-center gap-3 mt-5">
-                <form>
-                    <flux:input as="button" placeholder="Search..." icon="magnifying-glass" kbd="⌘K" class="bg-white text-black px-4 py-2 rounded-md shadow-md" />
-                </form>
+        <x-typography.p class="text-center text-gray-300 mt-2">
+            Where will your next journey take you?
+        </x-typography.p>
 
-                <flux:button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
-                    <a href="/get-started" class="text-sm">Share Your Story</a>
-                </flux:button>
-            </div>
+        <div class="flex justify-center gap-3 mt-5">
+            <form>
+                <flux:input as="button" placeholder="Search..." icon="magnifying-glass" kbd="⌘K"
+                    class="bg-white text-black px-4 py-2 rounded-md shadow-md" />
+            </form>
+
+            <flux:button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+                <a href="/get-started" class="text-sm">Share Your Story</a>
+            </flux:button>
+        </div>
+
+        <!-- Swiper Pagination Overlay -->
+        <div class="absolute bottom-5 w-full flex justify-center">
+            <div class="swiper-pagination !relative z-20"></div>
         </div>
     </div>
+</div>
 
 
 
@@ -94,10 +103,6 @@
             </div>
         </div>
     </div>
-{{-- top-countries-prev --}}
-{{-- top-countries-next --}}
-
-
 
 
     <!-- Top Countries for Your Next Adventure -->
@@ -131,9 +136,9 @@
             <div class="swiper-wrapper">
                 @foreach($editorsPicks as $pick)
                 <div class="swiper-slide">
-                    <swiper-slide class="news-card-thirteen" lazy="true">
+                    <swiper-slide class="news-card-thirteen">
                         <div class="news-card-img">
-                            <img src="{{ $pick['image'] }}" alt="Image" loading='' />
+                            <img src="{{ $pick['image'] }}" alt="Image" />
                         </div>
                     </swiper-slide>
                 </div>
@@ -216,3 +221,6 @@
         });
 
     </script>
+
+
+

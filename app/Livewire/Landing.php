@@ -6,7 +6,17 @@ use Livewire\Component;
 
 class Landing extends Component
 {
-
+    public $slides = [
+        [
+            'image' => 'https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        ],
+        [
+            'image' => 'https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        ],
+        [
+            'image' => 'https://images.pexels.com/photos/8828328/pexels-photo-8828328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        ],
+    ];
 
     public $editorsPicks = [
         [
