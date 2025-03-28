@@ -14,7 +14,6 @@
         "laravel/tinker": "^2.9",
         "livewire/flux": "^2.1",
         "livewire/livewire": "^3.5.12",
-        "luvi-ui/laravel-luvi": "^0.5.3",
         "mallardduck/blade-lucide-icons": "^1.23",
         "spatie/laravel-activitylog": "^4.9",
         "wireui/wireui": "^2.4",

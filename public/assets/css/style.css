@@ -62,7 +62,7 @@ input,
 textarea,
 select {
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, .15);
+    /* border: 1px solid rgba(0, 0, 0, .15); */
     padding: 12px 15px;
     width: 100%;
     font-size: 16px
@@ -4310,7 +4310,7 @@ select {
 #cmt-form .form-group textarea:focus,
 .contact-form .form-group input:focus,
 .contact-form .form-group textarea:focus {
-    border: 1px solid rgba(0, 0, 0, .29)
+    /* border: 1px solid rgba(0, 0, 0, .29) */
 }
 
 #cmt-form .form-group textarea,
@@ -4974,7 +4974,7 @@ select {
 .checkout-form .form-group input:focus,
 .checkout-form .form-group select:focus,
 .checkout-form .form-group textarea:focus {
-    border: 1px solid rgba(0, 0, 0, .29)
+    /* border: 1px solid rgba(0, 0, 0, .29) */
 }
 
 .checkout-form .form-group input::-moz-placeholder,
@@ -6243,13 +6243,11 @@ article {
     border: none;
     outline: none;
     padding-left: 15px;
-    background-color: #292524;
-    color: white;
+    /* background-color: #292524; */
     font-size: 1em;
   }
   .input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
-    -webkit-text-fill-color: #ffffff;
+    
   }
   .search-btn-wrap
   .Subscribe-btn {
