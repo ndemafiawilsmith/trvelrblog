@@ -20,32 +20,32 @@ class Landing extends Component
 
     public $editorsPicks = [
         [
-            'title' => 'Jiraiya Banks Wants To Teach You How To Build A House',
-            'image' => 'assets/img/news/news-80.webp',
+            'title' => 'Lekki Conservation Center',
+            'image' => 'assets/img/locations/dora-img-1.png',
             'category' => 'Lifestyle',
             'date' => 'Feb 27, 2024',
             'read_time' => '15 Min Read',
             'link' => 'business-details.html',
         ],
         [
-            'title' => 'The Secret Math Behind Mind Reading Magic Tricks',
-            'image' => 'assets/img/news/news-81.webp',
+            'title' => 'Badagry Black Heritage Adventure',
+            'image' => 'assets/img/locations/dora-img-2.png',
             'category' => 'Photography',
             'date' => 'Feb 27, 2024',
             'read_time' => '15 Min Read',
             'link' => 'business-details.html',
         ],
         [
-            'title' => 'Recovery And Cleanup In Florida After Hurricane Ian',
-            'image' => 'assets/img/news/news-82.webp',
+            'title' => 'Coscharis Assembly Plant',
+            'image' => 'assets/img/locations/dora-img-3.png',
             'category' => 'Business',
             'date' => 'Feb 27, 2024',
             'read_time' => '15 Min Read',
             'link' => 'business-details.html',
         ],
         [
-            'title' => '6 Romantic Places You Want to Visit with Your Partner',
-            'image' => 'assets/img/news/news-83.webp',
+            'title' => 'Ibadan Cultural and Historical Tour',
+            'image' => 'assets/img/locations/dora-img-4.png',
             'category' => 'Sports',
             'date' => 'Feb 27, 2024',
             'read_time' => '15 Min Read',
@@ -53,7 +53,7 @@ class Landing extends Component
         ],
         [
             'title' => 'Splurge Or Save: Last Minute Pampering Gift Ideas',
-            'image' => 'assets/img/news/news-84.webp',
+            'image' => 'assets/img/locations/dora-img-1.png',
             'category' => 'Education',
             'date' => 'Feb 27, 2024',
             'read_time' => '15 Min Read',
@@ -61,62 +61,51 @@ class Landing extends Component
         ],
         [
             'title' => 'How To Make Your Life Routine More Fun And Eco-friendly',
-            'image' => 'assets/img/news/news-85.webp',
+            'image' => 'assets/img/locations/dora-img-2.png',
             'category' => 'Technology',
             'date' => 'Feb 27, 2024',
             'read_time' => '15 Min Read',
             'link' => 'business-details.html',
         ],
     ];
-    public $countryPicks = [
+    public $countries = [
         [
-            'title' => 'Jiraiya Banks Wants To Teach You How To Build A House',
-            'image' => 'assets/img/news/news-80.webp',
-            'category' => 'Lifestyle',
-            'date' => 'Feb 27, 2024',
-            'read_time' => '15 Min Read',
-            'link' => 'business-details.html',
+            'image' => 'assets/img/locations/dora-country-1.png',
+            'flag-icon' => 'assets/img/flags/Ghana.png',
+            'flag-name' => 'Ghana',
+            
         ],
         [
-            'title' => 'The Secret Math Behind Mind Reading Magic Tricks',
-            'image' => 'assets/img/news/news-81.webp',
-            'category' => 'Photography',
-            'date' => 'Feb 27, 2024',
-            'read_time' => '15 Min Read',
-            'link' => 'business-details.html',
+            'image' => 'assets/img/locations/dora-country-2.png',
+            'flag-icon' => 'assets/img/flags/Nigeria.png',
+            'flag-name' => 'Nigeria',
+            
         ],
         [
-            'title' => 'Recovery And Cleanup In Florida After Hurricane Ian',
-            'image' => 'assets/img/news/news-82.webp',
-            'category' => 'Business',
-            'date' => 'Feb 27, 2024',
-            'read_time' => '15 Min Read',
-            'link' => 'business-details.html',
+            'image' => 'assets/img/locations/dora-country-3.png',
+            'flag-icon' => 'assets/img/flags/Kenya.png',
+            'flag-name' => 'Kenya',
+            
         ],
         [
-            'title' => '6 Romantic Places You Want to Visit with Your Partner',
-            'image' => 'assets/img/news/news-83.webp',
-            'category' => 'Sports',
-            'date' => 'Feb 27, 2024',
-            'read_time' => '15 Min Read',
-            'link' => 'business-details.html',
+            'image' => 'assets/img/locations/dora-country-4.png',
+            'flag-icon' => 'assets/img/flags/Tanzania.png',
+            'flag-name' => 'Tanzania',
+            
         ],
         [
-            'title' => 'Splurge Or Save: Last Minute Pampering Gift Ideas',
-            'image' => 'assets/img/news/news-84.webp',
-            'category' => 'Education',
-            'date' => 'Feb 27, 2024',
-            'read_time' => '15 Min Read',
-            'link' => 'business-details.html',
+            'image' => 'assets/img/locations/dora-country-1.png',
+            'flag-icon' => 'assets/img/flags/Ghana.png',
+            'flag-name' => 'assets/img/flags/Ghana.png',
+            
         ],
         [
-            'title' => 'How To Make Your Life Routine More Fun And Eco-friendly',
-            'image' => 'assets/img/news/news-85.webp',
-            'category' => 'Technology',
-            'date' => 'Feb 27, 2024',
-            'read_time' => '15 Min Read',
-            'link' => 'business-details.html',
+            'image' => 'assets/img/locations/dora-country-2.png',
+            'flag-icon' => 'assets/img/flags/Nigeria.png',
+            'flag-name' => 'Nigeria',
+            
         ],
+      
     ];
 
     public function render()

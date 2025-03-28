@@ -5,19 +5,22 @@
         <a href="/" class="flex items-center">
             <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
         </a>
+          <flux:navbar class="!p-1">
+            <flux:navbar.item href="#">Discover</flux:navbar.item>
+            <flux:navbar.item href="#">Traveler's Stories</flux:navbar.item>
+        </flux:navbar>
     </div>
 
     <!-- Desktop Navigation -->
     <div class="hidden md:flex items-center space-x-6">
-        <flux:navbar class="!p-1">
-            <flux:navbar.item href="#">Discover</flux:navbar.item>
-            <flux:navbar.item href="#">Traveler's Stories</flux:navbar.item>
-        </flux:navbar>
+      
 
         <!-- Dropdowns and Call-to-Action -->
         <div class="flex items-center space-x-3 relative">
-            <flux:dropdown class="!bg-white">
-                <flux:button icon="globe-alt" class="no-flux-style" variant="outline" />
+            <flux:dropdown class="">
+                <flux:button class="!rounded-full !px-0 !py-0 !w-10 !h-10">
+                    <flux:icon.globe-alt />
+                </flux:button>
                 <flux:navmenu class="max-w-[12rem]">
                     <div class="px-2 py-1.5">
                         <flux:text size="sm">No country yet</flux:text>
@@ -40,7 +43,7 @@
                 </flux:navmenu>
             </flux:dropdown>
 
-            <flux:button>
+            <flux:button class="dora-style-btn">
                 <a href="/get-started" class='text-sm'>Share Your Story</a>
             </flux:button>
         </div>
@@ -55,28 +58,7 @@
         </button>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed top-0 right-0 w-3/4 h-screen bg-[#f9f9f9] !z-50 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col py-3">
-        <div class="flex flex-col">
-            <div class="flex justify-end">
-                <button id="menu-close" class="text-gray-800 focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            
-        <!-- Mobile Nav Links -->
-        <div class="bg-[#f9f9f9] px-4 !z-50">
-            <ul class="mt-2 space-y-4 text-lg w-full">
-                <li><a href="#" class="block text-gray-800">Discover</a></li>
-                <li><a href="#" class="block text-gray-800">Traveler's Stories</a></li>
-                <li><a href="/get-started" class="block text-gray-800">Share Your Story</a></li>
-            </ul>
-        </div>
-        </div>
 
-    </div>
 
 </nav>
 

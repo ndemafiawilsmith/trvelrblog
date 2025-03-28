@@ -3003,13 +3003,18 @@ select {
 
 .news-card-thirteen .news-card-img .news-cat {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     left: 20px;
     font-size: 14px;
     padding: 4px 10px 3px;
     background-color: var(--secondaryColor);
     color: var(--whiteColor);
     border-radius: 5px
+}
+.news-card-thirteen .news-card-img .flag-cat {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
 }
 
 .news-card-thirteen .news-card-info {
@@ -6246,9 +6251,10 @@ article {
     -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
     -webkit-text-fill-color: #ffffff;
   }
+  .search-btn-wrap
   .Subscribe-btn {
     height: 100%;
-    width: 12rem;
+    width: 10rem;
     border: none;
     border-radius: 8px;
     color: var(--bgColor);
@@ -6261,11 +6267,22 @@ article {
     justify-content: center;
     position: relative;
     transition: all 0.3s;
-    padding-left: .8em;
-    padding-right: .8em;
+    padding: .8rem 1.37rem;
   }
 
   .Subscribe-btn:hover {
     color: white;
   }
 
+  .dora-style-btn{
+    background-color: var(--secondaryColor) !important;
+    color: var(--whiteColor) !important;
+    padding: 16px 28px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #1E1E1E !important;
+    transition: all 100ms ease-in-out !important;
+}
+.dora-style-btn:hover {
+    background-color:   var(--whiteColor) !important ;
+    color: var(--secondaryColor) !important;
+}
