@@ -18,13 +18,13 @@
 
         <!-- Fixed Overlay Content (Without Black Background) -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10">
-            <x-typography.h2 class="text-white text-center text-3xl sm:text-4xl lg:text-5xl font-bold border-none">
+            <h2 class="text-white text-center text-3xl sm:text-4xl lg:text-5xl font-bold border-none">
                 Find your perfect <span class="uppercase text-3xl sm:text-4xl lg:text-5xl text-[#00FF45]">Adventures</span>
-            </x-typography.h2>
+            </h2>
 
-            <x-typography.p class="text-center text-gray-300 mt-2">
+            <p class="text-center text-gray-300 mt-2">
                 Where will your next journey take you?
-            </x-typography.p>
+            </p>
 
             <div class="flex justify-center gap-3 mt-5">
                 <form>

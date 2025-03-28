@@ -1,4 +1,4 @@
-@import '../../vendor/livewire/flux/dist/flux.css'; /* Load Flux UI first */
+@import '../../vendor/livewire/flux/dist/flux.css'; 
 
 @tailwind base;
 @tailwind components;
@@ -13,10 +13,5 @@
     
 }
 
-
-
-.no-flux-style:hover{
-    background-color: none;
-}
 
 
