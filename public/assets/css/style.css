@@ -6,7 +6,7 @@
     --primaryColor: #222222;
     --secondaryColor: #1E1E1E;
     --paraColor: #555555;
-    --optionalColor: #888888;
+    --optionalColor: #086233;
     --bgColor: #F6F6F6;
     --bgColorTwo: #240135;
     --grayColor: #F8F8F8;
@@ -6213,4 +6213,59 @@ article {
     font-size: 17px
 }
 
+
+/* From Uiverse.io by vinodjangid07 */
+.input-wrapper {
+    width: fit-content;
+    height: 45px;
+    border-radius: 8px;
+    padding: 3px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+
+  .icon {
+    width: 30px;
+    fill: var(--optionalColor);
+    margin-left: 8px;
+    transition: all 0.3s;
+  }
+  .input {
+    max-width: 270px;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    background-color: #292524;
+    color: white;
+    font-size: 1em;
+  }
+  .input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
+    -webkit-text-fill-color: #ffffff;
+  }
+  .Subscribe-btn {
+    height: 100%;
+    width: 12rem;
+    border: none;
+    border-radius: 8px;
+    color: var(--bgColor);
+    cursor: pointer;
+    background-color: var(--optionalColor);
+    font-weight: 500;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+    padding-left: .8em;
+    padding-right: .8em;
+  }
+
+  .Subscribe-btn:hover {
+    color: white;
+  }
 

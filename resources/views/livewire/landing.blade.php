@@ -1,50 +1,49 @@
 <!-- resources/views/pages/home.blade.php -->
 
- <div class="">
-<div class="relative w-full h-[500px]">
-    <!-- Swiper Container -->
-    <swiper-container class="mySwiper w-full h-full" pagination="true" pagination-clickable="true" navigation="false"
-        space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false"
-        style="--swiper-pagination-color: #00FF45;">
+<div class="">
+    <div class="relative w-full h-[500px]">
+        <!-- Swiper Container -->
+        <swiper-container class="mySwiper w-full h-full !-z-50" pagination="true" loop="true" pagination-clickable="true" navigation="false" space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false" style="--swiper-pagination-color: #00FF45;">
 
-        @foreach($slides as $slide)
+            @foreach($slides as $slide)
             <swiper-slide class="relative">
                 <!-- Image Wrapper with Dim Effect -->
                 <div class="w-full h-full relative">
                     <img src="{{ $slide['image'] }}" alt="Slide Image" class="w-full h-full object-cover brightness-50">
                 </div>
             </swiper-slide>
-        @endforeach
+            @endforeach
 
-    </swiper-container>
+        </swiper-container>
 
-    <!-- Fixed Overlay Content (Without Black Background) -->
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10">
-        <x-typography.h2 class="text-white text-center text-3xl sm:text-4xl lg:text-5xl font-bold border-none">
-            Find your perfect <span class="uppercase text-[#00FF45]">Adventures</span>
-        </x-typography.h2>
+        <!-- Fixed Overlay Content (Without Black Background) -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-10">
+            <x-typography.h2 class="text-white text-center text-3xl sm:text-4xl lg:text-5xl font-bold border-none">
+                Find your perfect <span class="uppercase text-[#00FF45]">Adventures</span>
+            </x-typography.h2>
 
-        <x-typography.p class="text-center text-gray-300 mt-2">
-            Where will your next journey take you?
-        </x-typography.p>
+            <x-typography.p class="text-center text-gray-300 mt-2">
+                Where will your next journey take you?
+            </x-typography.p>
 
-        <div class="flex justify-center gap-3 mt-5">
-            <form>
-                <flux:input as="button" placeholder="Search..." icon="magnifying-glass" kbd="⌘K"
-                    class="bg-white text-black px-4 py-2 rounded-md shadow-md" />
-            </form>
+            <div class="flex justify-center gap-3 mt-5">
+                <form>
+                    <!-- From Uiverse.io by vinodjangid07 -->
+                    <div class="input-wrapper">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                        </svg>
 
-            <flux:button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
-                <a href="/get-started" class="text-sm">Share Your Story</a>
-            </flux:button>
-        </div>
+                        <input type="text" name="text" class="input" placeholder="Places to explore..." />
+                        <button class="Subscribe-btn">
+                             <a href="/get-started" class="text-sm">Search</a>
+                        </button>
+                    </div>
 
-        <!-- Swiper Pagination Overlay -->
-        <div class="absolute bottom-5 w-full flex justify-center">
-            <div class="swiper-pagination !relative z-20"></div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 
 
@@ -55,13 +54,13 @@
         <div class="section-title-two mb-6">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <h2 class="text-xl font-medium">Featured Destinations</h2>
+                    <h2 class="text-2xl font-medium">Featured Destinations</h2>
                 </div>
             </div>
         </div>
 
         <!-- Navigation for Featured Destinations -->
-        <div class="absolute w-full flex justify-between items-center top-64 z-50">
+        <div class="absolute w-full flex justify-between items-center top-64 z-30">
             <button class="absolute -left-5 featured-prev-btn flex justify-center items-center bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-600 transition w-8 h-8">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-8 h-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -111,13 +110,13 @@
         <div class="section-title-two mb-6">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <h2 class="text-xl font-medium">Top Countries</h2>
+                    <h2 class="text-2xl font-medium">Top Countries</h2>
                 </div>
             </div>
         </div>
 
         <!-- Navigation for Top Countries -->
-     <div class="absolute w-full flex justify-between items-center top-52 z-50">
+        <div class="absolute w-full flex justify-between items-center top-52 z-30">
             <button class="absolute -left-5 top-countries-prev flex justify-center items-center bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-600 transition w-8 h-8">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-8 h-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -166,12 +165,6 @@
             object-fit: cover;
         }
 
-        /* Active pagination bullet */
-        .swiper-pagination-bullet-active {
-            background-color: #00FF45 !important;
-            /* Active bullet color */
-            opacity: 1;
-        }
 
     </style>
 
@@ -195,6 +188,9 @@
                     , 480: {
                         slidesPerView: 1
                     }
+                    , 288: {
+                        slidesPerView: 1
+                    }
                 }
             });
 
@@ -216,11 +212,11 @@
                     , 480: {
                         slidesPerView: 1
                     }
+                    , 288: {
+                        slidesPerView: 1
+                    }
                 }
             });
         });
 
     </script>
-
-
-

@@ -64,6 +64,7 @@
 <body>
     <livewire:navbar />
     {{ $slot }}
+    <livewire:footer />
 
 
 
