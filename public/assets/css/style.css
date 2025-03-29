@@ -3008,7 +3008,7 @@ select {
     font-size: 14px;
     padding: 4px 10px 3px;
     background-color: var(--secondaryColor);
-    color: var(--whiteColor);
+    color: var(--bgColor);
     border-radius: 5px
 }
 .news-card-thirteen .news-card-img .flag-cat {

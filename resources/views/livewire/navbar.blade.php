@@ -6,7 +6,7 @@
             <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
         </a>
           <flux:navbar class="!p-1">
-            <flux:navbar.item href="#">Discover</flux:navbar.item>
+            <flux:navbar.item href="#">Tour Marketplace</flux:navbar.item>
             <flux:navbar.item href="#">Traveler's Stories</flux:navbar.item>
         </flux:navbar>
     </div>
