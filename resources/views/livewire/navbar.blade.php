@@ -2,12 +2,12 @@
 
     <!-- Logo -->
     <div class="flex items-center">
-        <a href="/" class="flex items-center">
+        <a wire:navigate  href="/"  class="flex items-center">
             <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
         </a>
-          <flux:navbar class="!p-1">
-            <flux:navbar.item href="#">Tour Marketplace</flux:navbar.item>
-            <flux:navbar.item href="#">Traveler's Stories</flux:navbar.item>
+          <flux:navbar class="!p-1 md:hidden sm:hidden lg:flex">
+            <flux:navbar.item wire:navigate href="/tour-marketplace">Tour Marketplace</flux:navbar.item>
+            <flux:navbar.item wire:navigate href="#">Traveler's Stories</flux:navbar.item>
         </flux:navbar>
     </div>
 

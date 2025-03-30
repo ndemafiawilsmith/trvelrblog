@@ -20,6 +20,7 @@
         "@alpinejs/anchor": "^3.14.9",
         "@alpinejs/collapse": "^3.14.9",
         "alpinejs": "^3.14.9",
+        "flowbite": "^3.1.2",
         "lucide": "^0.483.0"
     }
 }
