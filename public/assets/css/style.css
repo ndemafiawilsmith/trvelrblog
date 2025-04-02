@@ -21,7 +21,8 @@
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    border: 1px solid green;
 }
 
 html {
@@ -6247,7 +6248,7 @@ article {
     font-size: 1em;
   }
   .input:-webkit-autofill {
-    
+
   }
   .search-btn-wrap
   .Subscribe-btn {
@@ -6276,8 +6277,16 @@ article {
     background-color: var(--secondaryColor) !important;
     color: var(--whiteColor) !important;
     padding: 16px 28px !important;
-    border-radius: 8px !important; 
+    border-radius: 8px !important;
     border: 1px solid #1E1E1E !important;
+    transition: all 100ms ease-in-out !important;
+}
+  .dora-neutral-btn{
+    background-color: white !important;
+    color: #086233 !important;
+    padding: 16px 28px !important;
+    border-radius: 8px !important;
+    border: 1px solid #086233 !important;
     transition: all 100ms ease-in-out !important;
 }
 .dora-style-btn:hover {

@@ -1,3 +1,4 @@
+@props(['pageType' => 'default'])
 <!DOCTYPE html>
 <html lang="eng">
 
@@ -42,11 +43,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
+  
+
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
     <!-- Add this inside your `<head>` section -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     {{-- scripts --}}
 
@@ -62,7 +65,7 @@
 </head>
 
 <body>
-    <livewire:navbar />
+
     {{ $slot }}
     <livewire:footer />
 

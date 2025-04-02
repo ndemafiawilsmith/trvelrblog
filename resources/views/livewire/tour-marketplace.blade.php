@@ -1,58 +1,253 @@
 <div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-    
+    <livewire:navbar />
+<!-- Your Tour Marketplace Content -->
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-  </a>
-  <div class="flex md:order-2">
-    <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
-      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-      </svg>
-      <span class="sr-only">Search</span>
-    </button>
-    <div class="relative hidden md:block">
-      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-        </svg>
-        <span class="sr-only">Search icon</span>
-      </div>
-      <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
-    </div>
-    <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
-      <div class="relative mt-3 md:hidden">
-        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-          </svg>
+
+{{-- Breadcrumbs  --}}
+<div class="relative container lg:pt-32">
+
+    <nav class="flex" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+        <li class="inline-flex items-center">
+          <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+            <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+            </svg>
+            Home
+          </a>
+        </li>
+
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Marketplace</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+</div>
+
+       <!-- Featured Destinations -->
+    <div class="container pt-10 relative">
+
+        <div class="section-title-two mb-2">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h2 class="text-2xl font-bold">Featured Destinations</h2>
+                </div>
+            </div>
         </div>
-        <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
-      </div>
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-        </li>
-      </ul>
+
+        <!-- Navigation for Featured Destinations -->
+        <div class="absolute w-full flex justify-between items-center lg:top-64 top-72 z-30">
+            <button class="absolute -left-5 featured-prev-btn flex justify-center items-center bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-600 transition w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+
+            <button class="absolute right-10 featured-next-btn flex justify-center items-center bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-600 transition w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+
+
+        <div class="swiper-container featured-destinations-swiper overflow-hidden">
+            <div class="swiper-wrapper">
+                @foreach($editorsPicks as $pick)
+                <div class="swiper-slide">
+                    <div class="news-card-thirteen">
+                        <div class="news-card-img">
+                            <img src="{{ $pick['image'] }}" alt="Image" loading='lazy' />
+
+                        </div>
+                        <div class="news-card-info">
+                            <h3 class='font-semibold text-sm'>
+                                <a href="{{ $pick['link'] }}">{{ $pick['title'] }}</a>
+                            </h3>
+                            <ul class="news-metainfo list-style">
+                                <li>
+                                    <i class="fi fi-rr-calendar-minus"></i>
+                                    <a href="news-by-date.html">{{ $pick['date'] }}</a>
+                                </li>
+                                <li><i class="fi fi-rr-clock-three"></i>{{ $pick['read_time'] }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
+
+    <!-- Top Countries for Your Next Adventure -->
+    <div class="container py-10 relative">
+
+        <div class="section-title-two mb-2">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h2 class="text-2xl font-bold">Top Countries for Your Next Adventure</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation for Top Countries -->
+        <div class="absolute w-full flex justify-between items-center lg:top-64 top-72 z-30">
+            <button class="absolute -left-5 top-countries-prev flex justify-center items-center bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-600 transition w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+
+            <button class="absolute right-10 top-countries-next flex justify-center items-center bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-600 transition w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+
+
+        <div class="swiper-container top-countries-swiper overflow-hidden">
+            <div class="swiper-wrapper">
+                @foreach($countries as $country)
+                <div class="swiper-slide">
+                    <swiper-slide class="news-card-thirteen">
+                        <div class="news-card-img">
+                            <img src="{{ $country['image'] }}" alt="Image" />
+                             <a href="business.html" class="flag-cat">
+                              <img src="{{ $country['flag-icon'] }}" alt="{{ $country['flag-name'] }}" />
+                             </a>
+                        </div>
+                    </swiper-slide>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+
+ <style>
+        /* Hide Swiper Default Icons */
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            display: none !important;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Featured Destinations Swiper
+            new Swiper(".featured-destinations-swiper", {
+                slidesPerView: 3
+                , spaceBetween: 20
+                , navigation: {
+                    nextEl: ".featured-next-btn"
+                    , prevEl: ".featured-prev-btn"
+                }
+                , breakpoints: {
+                    1024: {
+                        slidesPerView: 4
+                    }
+                    , 768: {
+                        slidesPerView: 3
+                    }
+                    , 480: {
+                        slidesPerView: 1
+                    }
+                    , 288: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+
+            // Top Countries Swiper
+            new Swiper(".top-countries-swiper", {
+                slidesPerView: 3
+                , spaceBetween: 20
+                , navigation: {
+                    nextEl: ".top-countries-next"
+                    , prevEl: ".top-countries-prev"
+                }
+                , breakpoints: {
+                    1024: {
+                        slidesPerView: 4
+                    }
+                    , 768: {
+                        slidesPerView: 3
+                    }
+                    , 480: {
+                        slidesPerView: 1
+                    }
+                    , 288: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+            // City Escape Swiper
+            new Swiper(".city-escape-swiper", {
+                slidesPerView: 3
+                , spaceBetween: 20
+                , navigation: {
+                    nextEl: ".city-escape-next-btn"
+                    , prevEl: ".city-escape-prev-btn"
+                }
+                , breakpoints: {
+                    1024: {
+                        slidesPerView: 4
+                    }
+                    , 768: {
+                        slidesPerView: 3
+                    }
+                    , 480: {
+                        slidesPerView: 1
+                    }
+                    , 288: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+            // Discover Swiper
+            new Swiper(".discover-swiper", {
+                slidesPerView: 3
+                , spaceBetween: 20
+                , navigation: {
+                    nextEl: ".discover-next-btn"
+                    , prevEl: ".discover-prev-btn"
+                }
+                , breakpoints: {
+                    1024: {
+                        slidesPerView: 4
+                    }
+                    , 768: {
+                        slidesPerView: 3
+                    }
+                    , 480: {
+                        slidesPerView: 1
+                    }
+                    , 288: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+        });
+
+    </script>
+
 
 </div>
+
+
+

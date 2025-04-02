@@ -1,9 +1,6 @@
 <?php
 
-use App\Livewire\Blog\ByCategory;
-use App\Livewire\Front\BlogDetail;
-use App\Livewire\Front\Index;
-use App\Livewire\Marketplace;
+use App\Http\Controllers\HomeController;
 
 use App\Livewire\Landing;
 use App\Livewire\TourMarketplace;

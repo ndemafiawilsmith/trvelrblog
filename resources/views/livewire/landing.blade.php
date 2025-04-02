@@ -1,6 +1,8 @@
 <!-- resources/views/pages/home.blade.php -->
 
-<div class="">
+<div>
+    <livewire:landing-navbar />
+ 
     <div class="relative w-full h-[500px]">
         <!-- Swiper Container -->
         <swiper-container class="mySwiper w-full h-full !-z-50" pagination="true" loop="true" pagination-clickable="true" navigation="false" space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false" style="--swiper-pagination-color: #00FF45;">
