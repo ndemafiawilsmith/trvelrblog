@@ -3,14 +3,14 @@
 <div>
     <livewire:landing-navbar />
  
-    <div class="relative w-full h-[500px]">
+    <div class="relative w-full h-[500px] lg:mt-16 mt-10">
         <!-- Swiper Container -->
         <swiper-container class="mySwiper w-full h-full !-z-50" pagination="true" loop="true" pagination-clickable="true" navigation="false" space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false" style="--swiper-pagination-color: #00FF45;">
 
             @foreach($slides as $slide)
             <swiper-slide class="relative">
                 <!-- Image Wrapper with Dim Effect -->
-                <div class="w-full h-full relative">
+                <div class="w-full h-full relative -z-50">
                     <img src="{{ $slide['image'] }}" alt="Slide Image" class="w-full h-full object-cover brightness-50">
                 </div>
             </swiper-slide>
