@@ -231,9 +231,8 @@
         margin-bottom: 15px;
     }
     .section-title-two h2 {
-        font-size: 26px;
+        font-size: 1.3em;
         line-height: 33px;
-        margin-bottom: 10px;
     }
     .section-title-two .link-three {
         position: relative;
@@ -1071,7 +1070,7 @@
         padding-bottom: 15px;
     }
     .section-title-two h2 {
-        font-size: 32px;
+        font-size: 1.4em;
         line-height: 42px;
     }
     .hero-news-card .hero-news-info {
@@ -1689,7 +1688,7 @@
         margin-bottom: 0;
     }
     .section-title-two h2 {
-        font-size: 36px;
+        font-size: 24px;
         line-height: 30px;
         display: inline-block;
         position: relative;

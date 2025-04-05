@@ -1,3 +1,4 @@
+@props(['pageType' => 'default'])
 <!DOCTYPE html>
 <html lang="eng">
 
@@ -74,13 +75,17 @@
     <meta name="keywords"
         content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
+  
+
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
     <!-- Add this inside your `<head>` section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     {{-- scripts --}}
 
@@ -96,12 +101,10 @@
 </head>
 
 <body>
-    <livewire:navbar />
+
     {{ $slot }}
+    <livewire:footer />
 
-
-    {{-- <<<<<<< HEAD
-======= --}}
     <div class="container-fluid">
         <div class="footer-wrap">
             <div class="row align-items-center">
@@ -155,6 +158,8 @@
     @stack('scripts')
     <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/fslightbox.js') }}"></script>
@@ -168,6 +173,8 @@
 </body>
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 
 </body>
 </html>

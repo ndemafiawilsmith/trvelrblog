@@ -6,7 +6,7 @@
     --primaryColor: #222222;
     --secondaryColor: #1E1E1E;
     --paraColor: #555555;
-    --optionalColor: #888888;
+    --optionalColor: #086233;
     --bgColor: #F6F6F6;
     --bgColorTwo: #240135;
     --grayColor: #F8F8F8;
@@ -23,7 +23,8 @@
 
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    border: 1px solid green;
 }
 
 html {
@@ -64,7 +65,7 @@ input,
 textarea,
 select {
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, .15);
+    /* border: 1px solid rgba(0, 0, 0, .15); */
     padding: 12px 15px;
     width: 100%;
     font-size: 16px
@@ -3007,13 +3008,18 @@ select {
 
 .news-card-thirteen .news-card-img .news-cat {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     left: 20px;
     font-size: 14px;
     padding: 4px 10px 3px;
     background-color: var(--secondaryColor);
-    color: var(--whiteColor);
+    color: var(--bgColor);
     border-radius: 5px
+}
+.news-card-thirteen .news-card-img .flag-cat {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
 }
 
 .news-card-thirteen .news-card-info {
@@ -4310,7 +4316,7 @@ select {
 #cmt-form .form-group textarea:focus,
 .contact-form .form-group input:focus,
 .contact-form .form-group textarea:focus {
-    border: 1px solid rgba(0, 0, 0, .29)
+    /* border: 1px solid rgba(0, 0, 0, .29) */
 }
 
 #cmt-form .form-group textarea,
@@ -4974,7 +4980,7 @@ select {
 .checkout-form .form-group input:focus,
 .checkout-form .form-group select:focus,
 .checkout-form .form-group textarea:focus {
-    border: 1px solid rgba(0, 0, 0, .29)
+    /* border: 1px solid rgba(0, 0, 0, .29) */
 }
 
 .checkout-form .form-group input::-moz-placeholder,
@@ -6216,4 +6222,77 @@ article {
     font-weight: 500;
     margin-left: 5px;
     font-size: 17px
+}
+/* From Uiverse.io by vinodjangid07 */
+.input-wrapper {
+    width: fit-content;
+    height: 45px;
+    border-radius: 8px;
+    padding: 3px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+
+  .icon {
+    width: 30px;
+    fill: var(--optionalColor);
+    margin-left: 8px;
+    transition: all 0.3s;
+  }
+  .input {
+    max-width: 270px;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    /* background-color: #292524; */
+    font-size: 1em;
+  }
+  .input:-webkit-autofill {
+
+  }
+  .search-btn-wrap
+  .Subscribe-btn {
+    height: 100%;
+    width: 10rem;
+    border: none;
+    border-radius: 8px;
+    color: var(--bgColor);
+    cursor: pointer;
+    background-color: var(--optionalColor);
+    font-weight: 500;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+    padding: .8rem 1.37rem;
+  }
+
+  .Subscribe-btn:hover {
+    color: white;
+  }
+
+  .dora-style-btn{
+    background-color: var(--secondaryColor) !important;
+    color: var(--whiteColor) !important;
+    padding: 16px 28px !important;
+    border-radius: 8px !important;
+    border: 1px solid #1E1E1E !important;
+    transition: all 100ms ease-in-out !important;
+}
+  .dora-neutral-btn{
+    background-color: white !important;
+    color: #086233 !important;
+    padding: 16px 28px !important;
+    border-radius: 8px !important;
+    border: 1px solid #086233 !important;
+    transition: all 100ms ease-in-out !important;
+}
+.dora-style-btn:hover {
+    background-color:   var(--whiteColor) !important ;
+    color: var(--secondaryColor) !important;
 }
