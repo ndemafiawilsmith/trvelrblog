@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
-    <title>{{ $title ?? '    DoraBlog - Your Gateway to African Travel Adventures'}}</title>
+    <title>{{ $title ?? 'DoraBlog - Your Gateway to African Travel Adventures' }}</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    
 
     {{-- SEO  --}}
 
@@ -43,7 +43,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
-  
+
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
@@ -59,12 +59,13 @@
     @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
 
 
-    <wireui:scripts />
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/@alpinejs/focus@3.10.3/dist/cdn.min.js" defer></script>
 </head>
 
 <body>
+
+
 
     {{ $slot }}
     <livewire:footer />

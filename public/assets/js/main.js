@@ -231,6 +231,8 @@
             }
         }
     });
+    document.documentElement.style.setProperty('--livewire-progress-bar-color', '#00FF45');
+
     AOS.init({
         startEvent: 'load',
     });
