@@ -2,14 +2,18 @@
 
 namespace App\Livewire\Front;
 
+use App\Mail\MyMail;
 use App\Models\Category;
 use App\Models\Post;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class Index extends Component
 {
     public function render()
     {
+
+        // Mail::to('ivonjiaka68@gmail.com')->send(new MyMail());
         // Get the main blog post (latest published blog post)
         $mainBlog = Post::where('status', 'draft')
             ->orderBy('published_at', 'desc')

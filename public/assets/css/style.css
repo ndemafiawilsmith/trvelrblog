@@ -20,6 +20,8 @@
     --transitionTwo: all ease .9s
 }
 
+
+
 * {
     box-sizing: border-box;
     border: 1px solid green;
@@ -2312,6 +2314,7 @@ select {
 
 .featured-news-three .news-card-eleven .news-card-info h3 {
     font-size: 36px;
+    font-family: 'dora', sans-serif;
     line-height: 50px;
     margin: 0 0 9px
 }
@@ -2771,7 +2774,8 @@ select {
 .news-card-eleven .news-card-info h3 {
     font-size: 22px;
     line-height: 30px;
-    margin: 13px 0 16px
+    margin: 13px 0 16px;
+    font-family: 'dora', sans-serif;
 }
 
 .news-card-seven {
@@ -3064,7 +3068,8 @@ select {
 
 .video-wrap-three .news-card-eleven .news-card-info h3 {
     font-size: 36px;
-    line-height: 50px
+    line-height: 50px;
+    font-family: 'dora', sans-serif;
 }
 
 .video-wrap-three .news-card-three {
@@ -6218,8 +6223,6 @@ article {
     margin-left: 5px;
     font-size: 17px
 }
-
-
 /* From Uiverse.io by vinodjangid07 */
 .input-wrapper {
     width: fit-content;
