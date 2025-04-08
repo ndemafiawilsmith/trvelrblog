@@ -39,12 +39,15 @@
                             <h3 class='font-semibold text-sm'>
                                 <a href="{{ $discover['link'] }}">{{ $discover['title'] }}</a>
                             </h3>
-                            <ul class="news-metainfo list-style">
+                            <ul class="news-metainfo list-style flex justify-between">
                                 <li>
-                                    <i class="fi fi-rr-calendar-minus"></i>
-                                    <a href="news-by-date.html">{{ $discover['date'] }}</a>
+                                    <p class="text-gray-300 text-xs">from</p>
+                                    <p class="font-bold text-black">{{ $discover['amount'] }} <span class="text-xs text-gray-300 font-normal">per adult</span>
                                 </li>
-                                <li><i class="fi fi-rr-clock-three"></i>{{ $discover['read_time'] }}</li>
+                                <li>
+                                <i class="fi fi-rr-clock-three"></i>
+                                <p class="text-gray-600 text-base text-end">{{ $discover['tour_type'] }}</p>
+                                </li>
                             </ul>
                         </div>
                     </div>

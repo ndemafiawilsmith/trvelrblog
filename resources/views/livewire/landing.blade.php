@@ -29,14 +29,14 @@
             </p>
 
             <div class="flex justify-center gap-3 mt-5">
-                <form>
+                <form action="{{ route('search') }}" method="GET">
                     <!-- From Uiverse.io by vinodjangid07 -->
                     <div class="input-wrapper">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
                         </svg>
 
-                        <input class="input text-[#1e1e1e] focus:ring-0 focus:outline-none focus:border-none" placeholder="Places to explore..." />
+                        <input name="query" class="input text-[#1e1e1e] focus:ring-0 focus:outline-none focus:border-none" placeholder="Places to explore..." />
 
                         <div class="flex gap-1">
                             <div class='flex justify-center items-center'>
@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="search-btn-wrap">
-                                <button class="Subscribe-btn">
+                                <button type="submit" class="Subscribe-btn">
                                     <a href="/get-started" class="text-sm">Search</a>
                                 </button>
                             </div>
