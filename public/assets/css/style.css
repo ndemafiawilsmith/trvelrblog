@@ -17,7 +17,7 @@
     --yellowColor: #FFCB36;
     --fontSize: 16px;
     --transition: all ease .5s;
-    --transitionTwo: all ease .9s
+    --transitionTwo: all ease .9s;
 }
 
 
@@ -2353,7 +2353,7 @@ select {
     display: inline-block;
     margin-right: 17px;
     position: relative;
-    padding-left: 22px;
+    /* padding-left: 22px; */
     color: var(--optionalColor);
     font-size: 14px
 }

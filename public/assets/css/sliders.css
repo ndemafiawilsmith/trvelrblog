@@ -1,0 +1,12 @@
+        /* Hide Swiper Default Icons */
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            display: none !important;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }

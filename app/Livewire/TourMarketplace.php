@@ -6,8 +6,10 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 
 
+
 class TourMarketplace extends Component
 {
+ 
     public $editorsPicks = [
         [
             'title' => 'Lekki Conservation Center',
@@ -99,6 +101,8 @@ class TourMarketplace extends Component
     ];
     public function render()
     {
-        return view('livewire.tour-marketplace');
+        return view('livewire.tour-marketplace')->layout('livewire.layouts.app', [
+            'title' => 'Tour Marketplace', // Pass the title directly to the layout
+        ]);
     }
 }

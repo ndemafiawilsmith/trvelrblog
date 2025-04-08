@@ -7,22 +7,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/remixicon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/uicons-regular-rounded.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/flaticon_baxo.css') }}">
+ 
+    
+    
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/aos.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
-    <title>{{ $title ?? '    DoraBlog - Your Gateway to African Travel Adventures' }}</title>
-    <title>{{ $title ?? '    Dora Blog - Your Gateway to African Travel Adventures'}}</title>
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}"> --}}
+    <title>{{ $title ?? 'DoraBlog - Your Gateway to African Travel Adventures' }}</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    
 
     {{-- SEO  --}}
 
@@ -75,7 +73,7 @@
     <meta name="keywords"
         content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
-  
+
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
@@ -94,73 +92,31 @@
     @stack('styles')
     @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
 
-
-    <wireui:scripts />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="https://unpkg.com/@alpinejs/focus@3.10.3/dist/cdn.min.js" defer></script>
 </head>
 
 <body>
+    
+    {{-- Conditionally display the navbar --}}
+    @if (Route::is('landing') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
+        <livewire:landing-navbar />
+    @elseif (Route::is('tour-marketplace') || Route::is('about') || Route::is('contact'))
+    <livewire:navbar />
+    @endif
 
     {{ $slot }}
     <livewire:footer />
-
-    <div class="container-fluid">
-        <div class="footer-wrap">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <p class="copyright-text">Copyrights © {{ Date('Y') }}<span> Trvelr.</span> All rights
-                        reserved<a href="https://hibootstrap.com/"></a></p>
-                    <p class="copyright-text">Copyrights © {{ Date('Y') }}<span> Dora.</span> All rights reserved<a
-                            href="https://hibootstrap.com/"></a></p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <ul class="social-profile list-style">
-                        <li><a href="https://www.fb.com" target="_blank"><i class="flaticon-facebook-1"></i></a>
-                        </li>
-                        <li><a href="https://www.twitter.com" target="_blank"><i class="flaticon-twitter-1"></i></a>
-                        </li>
-                        <li><a href="https://www.instagram.com" target="_blank"><i class="flaticon-instagram-2"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com" target="_blank"><i class="flaticon-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer-right">
-                        <button class="subscribe-btn" data-bs-toggle="modal" data-bs-target="#newsletter-popup">Become a
-                            subscriber
-                            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M10.75 4C10.75 7.13537 12.9567 9.83761 16.0288 10.4642L19.9559 11.2651C20.3046 11.3363 20.5553 11.6427 20.556 11.9985C20.5567 12.3544 20.3072 12.6618 19.9588 12.7343L16.2209 13.512C13.1471 14.1516 10.9439 16.8604 10.9439 20H9.44394C9.44394 16.8801 11.218 14.1071 13.8966 12.75H3C2.58579 12.75 2.25 12.4142 2.25 12C2.25 11.5858 2.58579 11.25 3 11.25H13.7392C11.0416 9.90807 9.25 7.12986 9.25 4H10.75Z"
-                                    fill="#033A35"></path>
-                            </svg>
-                        </button>
-                        <button class="subscribe-btn" data-bs-toggle="modal"
-                            data-bs-target="#newsletter-popup">Become a subscriber<i
-                                class="flaticon-right-arrow"></i></button>
-                        <p>Get all the latest posts delivered straight to your inbox.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- >>>>>>> 95b2771 (Fix) --}}
 
 
 
     {{-- scripts --}}
     @fluxScripts
     @livewireScripts
-    @wireUiScripts
 
     @stack('scripts')
     <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/fslightbox.js') }}"></script>
     <script src="{{ asset('assets/js/aos.min.js') }}"></script>
