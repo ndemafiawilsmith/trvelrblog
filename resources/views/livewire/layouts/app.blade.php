@@ -24,6 +24,30 @@
 
     {{-- SEO  --}}
 
+    {{-- <<<<<<< HEAD --}}
+    <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures' }}">
+    <meta property="og:description"
+        content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
+    {{-- ======= --}}
+    <style>
+        @font-face {
+            font-family: 'dora';
+            src: url('/assets/fonts/altone/altone-reg.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        h3 {
+            font-family: 'dora', sans-serif;
+        }
+    </style>
+    <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures' }}">
+    <meta property="og:description"
+        content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
+    {{-- >>>>>>> 95b2771 (Fix) --}}
+    <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}">
+    <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
     <meta property="og:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta property="og:type" content="website">
@@ -33,6 +57,12 @@
     <meta property="og:image" content="{{ asset('front-assets/img/favicon.png') }}">
 
 
+    <meta name="google:description"
+        content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
+    <meta name="google:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures' }}">
+    <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
+    <meta name="description"
+        content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}" />
     <meta name="google:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta name="google:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
     <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
@@ -40,7 +70,8 @@
     <meta name="author" content="{{ $author ?? 'Dora Blog Team' }}">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
+    <meta name="keywords"
+        content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
 
 
@@ -49,6 +80,10 @@
     <!-- Add this inside your `<head>` section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     {{-- scripts --}}
 
@@ -76,8 +111,6 @@
 
 
 
-
-
     {{-- scripts --}}
     @fluxScripts
     @livewireScripts
@@ -94,6 +127,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+    </script>
+
+</body>
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

@@ -347,7 +347,8 @@
                                             alt="Image">Lifestyle<span>(6)</span></a></li>
                                 <li><a href="business.html"><img src="{{ asset('assets/img/icons/arrow-right.svg') }}"
                                             alt="Image">Politics<span>(2)</span></a></li>
-                                <li><a href="business.html"><img src="{{ asset('assets/img/icons/arrow-right.svg') }}"
+                                <li><a href="business.html"><img
+                                            src="{{ asset('assets/img/icons/arrow-right.svg') }}"
                                             alt="Image">Trending<span>(4)</span></a></li>
                             </ul>
                         </div>
@@ -458,33 +459,55 @@
                 const ulElements = div.querySelectorAll('ul');
                 const olElements = div.querySelectorAll('ol');
 
-                // Function to style and prepend icon to each <li> element
+                // Function to style and prepend SVG to each <li> element
                 const styleListItems = list => {
                     list.forEach(ul => {
                         ul.classList.add('content-feature-list', 'list-style',
-                            'mt-15'); // Add classes to <ul>
+                        'mt-15'); // Add classes to <ul>
                         const listItems = ul.querySelectorAll('li');
                         listItems.forEach(li => {
-                            // Create the <span> and <i> elements
+                            // Create the <span> element
                             const span = document.createElement('span');
                             span.classList.add('d-flex', 'align-items-center',
-                                'mr-15'); // Add classes to <span>
-                            const icon = document.createElement('i');
-                            icon.classList.add('flaticon-arrow-right');
+                            'mr-15'); // Add classes to <span>
 
-                            // Append the icon to the span and prepend the span to the <li>
-                            span.appendChild(icon);
+                            // Create the SVG element
+                            const svg = document.createElementNS("http://www.w3.org/2000/svg",
+                                "svg");
+                            svg.setAttribute("class", "icon");
+                            svg.setAttribute("width", "24");
+                            svg.setAttribute("height", "24");
+                            svg.setAttribute("viewBox", "0 0 24 24");
+                            svg.setAttribute("fill", "none");
+                            svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+
+                            // Create the <path> element
+                            const path = document.createElementNS("http://www.w3.org/2000/svg",
+                                "path");
+                            path.setAttribute("fill-rule", "evenodd");
+                            path.setAttribute("clip-rule", "evenodd");
+                            path.setAttribute("d",
+                                "M10.75 4C10.75 7.13537 12.9567 9.83761 16.0288 10.4642L19.9559 11.2651C20.3046 11.3363 20.5553 11.6427 20.556 11.9985C20.5567 12.3544 20.3072 12.6618 19.9588 12.7343L16.2209 13.512C13.1471 14.1516 10.9439 16.8604 10.9439 20H9.44394C9.44394 16.8801 11.218 14.1071 13.8966 12.75H3C2.58579 12.75 2.25 12.4142 2.25 12C2.25 11.5858 2.58579 11.25 3 11.25H13.7392C11.0416 9.90807 9.25 7.12986 9.25 4H10.75Z"
+                                );
+                            path.setAttribute("fill", "#033A35");
+
+                            // Append the path to the SVG
+                            svg.appendChild(path);
+
+                            // Append the SVG to the span and prepend the span to the <li>
+                            span.appendChild(svg);
                             li.classList.add('mt-15'); // Add margin class to <li>
                             li.insertBefore(span, li
-                                .firstChild); // Insert before the first child node of <li>
+                            .firstChild); // Insert before the first child node of <li>
                         });
                     });
                 };
 
-                // Style and prepend icon to <li> elements in <ul> and <ol>
+                // Style and prepend SVG to <li> elements in <ul> and <ol>
                 styleListItems(ulElements);
                 styleListItems(olElements);
             });
+
 
 
             // Function to style a specific blockquote element
