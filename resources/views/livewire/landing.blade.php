@@ -63,7 +63,7 @@
 
 
     <!-- Featured Destinations -->
-    <x-featured-slider :items="$editorsPicks" />
+    <x-featured-slider :editorsPicks="$editorsPicks" />
 
 
     <!-- Top Countries for Your Next Adventure -->
@@ -72,8 +72,18 @@
 
 
     <!-- City Escape -->
-    <x-city-escape-slider :countries="$editorsPicks" />
+    <x-city-escape-slider :editorsPicks="$editorsPicks" />
 
 
     <!-- Discover Africa -->
-    <x-discover-slider :countries="$$discoverAfrica" />
+    <x-discover-slider :discoverAfrica="$discoverAfrica" />
+
+{{-- Push page-specific styles (if any) --}}
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/sliders.css') }}">
+@endpush
+
+{{-- Push page-specific scripts (if any) --}}
+@push('scripts')
+    <script src="{{ asset('assets/js/sliders.js') }}"></script>
+@endpush

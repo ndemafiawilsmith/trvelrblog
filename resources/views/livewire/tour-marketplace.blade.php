@@ -1,10 +1,10 @@
 
 <div>
-    <livewire:navbar />
+    {{-- <livewire:navbar /> --}}
 
     <x-breadcrumbs :title="'Marketplace'" />
-    <x-featured-slider :items="$editorsPicks" />
-    <x-country-slider :countries="$countries" />
+    <x-featured-slider :editorsPicks="$editorsPicks" />
+    {{-- <x-country-slider :countries="$countries" /> --}}
 </div>
 
 {{-- Push page-specific styles (if any) --}}

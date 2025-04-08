@@ -7,6 +7,6 @@ use App\Livewire\TourMarketplace;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', Landing::class);
-Route::get('/tour-marketplace', TourMarketplace::class);
+Route::get('/', Landing::class)->name('landing');
+Route::get('/tour-marketplace', TourMarketplace::class)->name('tour-marketplace');
 

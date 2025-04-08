@@ -15,10 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
             , 768: {
                 slidesPerView: 3
             }
+            , 650: {
+                slidesPerView: 2
+            }
             , 480: {
-                slidesPerView: 1
+                slidesPerView: 2
             }
             , 288: {
+                slidesPerView: 1
+            }
+            , 0: {
                 slidesPerView: 1
             }
         }
@@ -39,10 +45,16 @@ document.addEventListener("DOMContentLoaded", function() {
             , 768: {
                 slidesPerView: 3
             }
+            , 650: {
+                slidesPerView: 2
+            }
             , 480: {
-                slidesPerView: 1
+                slidesPerView: 2
             }
             , 288: {
+                slidesPerView: 1
+            }
+            , 0: {
                 slidesPerView: 1
             }
         }
@@ -62,10 +74,16 @@ document.addEventListener("DOMContentLoaded", function() {
             , 768: {
                 slidesPerView: 3
             }
+            , 650: {
+                slidesPerView: 2
+            }
             , 480: {
-                slidesPerView: 1
+                slidesPerView: 2
             }
             , 288: {
+                slidesPerView: 1
+            }
+            , 0: {
                 slidesPerView: 1
             }
         }
@@ -85,10 +103,16 @@ document.addEventListener("DOMContentLoaded", function() {
             , 768: {
                 slidesPerView: 3
             }
+            , 650: {
+                slidesPerView: 2
+            }
             , 480: {
-                slidesPerView: 1
+                slidesPerView: 2
             }
             , 288: {
+                slidesPerView: 1
+            }
+            , 0: {
                 slidesPerView: 1
             }
         }

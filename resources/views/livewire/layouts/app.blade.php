@@ -7,17 +7,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/remixicon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/uicons-regular-rounded.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/flaticon_baxo.css') }}">
+ 
+    
+    
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/aos.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}"> --}}
     <title>{{ $title ?? 'DoraBlog - Your Gateway to African Travel Adventures' }}</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -58,12 +57,17 @@
     @stack('styles')
     @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
 
-
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="https://unpkg.com/@alpinejs/focus@3.10.3/dist/cdn.min.js" defer></script>
 </head>
 
 <body>
+    
+
+    {{-- Conditionally display the navbar --}}
+    @if (Route::is('landing')) {{-- Replace 'landing' with your homepage route name --}}
+        <livewire:landing-navbar />
+    @elseif (Route::is('tour-marketplace')) {{-- Replace 'tour-marketplace' with your route name --}}
+        <livewire:navbar />
+    @endif
 
 
 
@@ -77,14 +81,12 @@
     {{-- scripts --}}
     @fluxScripts
     @livewireScripts
-    @wireUiScripts
 
     @stack('scripts')
     <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/fslightbox.js') }}"></script>
     <script src="{{ asset('assets/js/aos.min.js') }}"></script>
