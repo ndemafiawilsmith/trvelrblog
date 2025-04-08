@@ -96,15 +96,12 @@
 
 <body>
     
-
     {{-- Conditionally display the navbar --}}
     @if (Route::is('landing') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
         <livewire:landing-navbar />
     @elseif (Route::is('tour-marketplace') || Route::is('about') || Route::is('contact'))
     <livewire:navbar />
-@endif
-
-
+    @endif
 
     {{ $slot }}
     <livewire:footer />
