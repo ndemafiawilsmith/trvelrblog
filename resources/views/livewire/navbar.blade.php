@@ -2,7 +2,7 @@
     <div class="container flex items-center justify-between px-0 gap-5">
         <!-- Logo -->
         <div class="flex items-center">
-            <a wire:navigate href="/" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
             </a>
         </div>

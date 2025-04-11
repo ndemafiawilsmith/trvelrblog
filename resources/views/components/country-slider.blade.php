@@ -32,5 +32,8 @@
                 </div>
             @endforeach
         </div>
+          <!-- ✅ Swiper's default nav buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     </div>
 </div>

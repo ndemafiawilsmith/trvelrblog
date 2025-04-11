@@ -1,6 +1,6 @@
 <div class="px-5 footer-wrap">
     <div class="flex flex-col container  gap-10 ">
-        <div class="flex lg:flex-row flex-col gap-10 justify-between">
+        <div class="flex lg:flex-row md:flex-row flex-col gap-10 justify-between">
             <div class="flex flex-col gap-5">
                 <div class="grid gap-3">
                     <div class="flex lg:justify-start md:justify-start justify-center">
@@ -11,7 +11,7 @@
                     </p>
                 </div>
                 <div class="">
-                    <div class="flex items-center space-x-2">
+                    <div class="flex lg:flex-row md:flex-row flex-col items-center  space-x-2">
                         <input type="email" class="border rounded px-3 py-1 w-full" placeholder="Enter your email">
                         <flux:button class="flex subscribe-btn" href="/get-started">
                             Let's go!

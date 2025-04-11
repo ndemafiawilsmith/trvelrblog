@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Featured Destinations Swiper
     new Swiper(".featured-destinations-swiper", {
         slidesPerView: 3
-        , spaceBetween: 20
-        , navigation: {
-            nextEl: ".featured-next-btn"
-            , prevEl: ".featured-prev-btn"
-        }
-        , breakpoints: {
+        , spaceBetween: 20,
+         loop: true,
+        navigation: {
+            nextEl: ".swiper-button-prev"
+            , prevEl: ".swiper-button-next"
+        },
+
+         breakpoints: {
             1024: {
                 slidesPerView: 4
             }
@@ -35,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesPerView: 3
         , spaceBetween: 20
         , navigation: {
-            nextEl: ".top-countries-next"
-            , prevEl: ".top-countries-prev"
+            nextEl: ".swiper-button-prev"
+            , prevEl: ".swiper-button-next"
         }
         , breakpoints: {
             1024: {
@@ -64,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesPerView: 3
         , spaceBetween: 20
         , navigation: {
-            nextEl: ".city-escape-next-btn"
-            , prevEl: ".city-escape-prev-btn"
+            nextEl: ".swiper-button-prev"
+            , prevEl: ".swiper-button-next"
         }
         , breakpoints: {
             1024: {
@@ -93,8 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesPerView: 3
         , spaceBetween: 20
         , navigation: {
-            nextEl: ".discover-next-btn"
-            , prevEl: ".discover-prev-btn"
+            nextEl: ".swiper-button-prev"
+            , prevEl: ".swiper-button-next"
         }
         , breakpoints: {
             1024: {
