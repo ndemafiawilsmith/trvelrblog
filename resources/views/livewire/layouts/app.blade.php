@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
- 
-    
-    
+
+
+
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/aos.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
@@ -20,7 +20,7 @@
     <title>{{ $title ?? 'DoraBlog - Your Gateway to African Travel Adventures' }}</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon-white.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
 
     {{-- SEO  --}}
 
@@ -79,13 +79,13 @@
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
     <!-- Add this inside your `<head>` section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 
     {{-- scripts --}}
+    
 
     {{-- @fluxAppearance --}}
     @livewireStyles
@@ -95,7 +95,7 @@
 </head>
 
 <body>
-    
+
     {{-- Conditionally display the navbar --}}
     @if (Route::is('landing') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
         <livewire:landing-navbar />
@@ -125,6 +125,8 @@
     <script>
         lucide.createIcons();
     </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 </body>
 

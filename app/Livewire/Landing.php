@@ -10,6 +10,9 @@ class Landing extends Component
 {
     public $slides = [
         [
+            'image' => 'assets/img/hero image.png',
+        ],
+        [
             'image' => 'https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         ],
         [

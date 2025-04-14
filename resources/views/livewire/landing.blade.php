@@ -60,8 +60,8 @@
     </div>
 
 
-
-
+    <x-hero-two />
+  
     <!-- Featured Destinations -->
     <x-featured-slider :editorsPicks="$editorsPicks" />
 
