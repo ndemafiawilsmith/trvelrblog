@@ -24,11 +24,11 @@
 
 * {
     box-sizing: border-box;
-    border: 1px solid green;
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 50px);
 }
 
 :focus,

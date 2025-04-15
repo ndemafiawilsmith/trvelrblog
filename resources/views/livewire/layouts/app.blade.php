@@ -90,7 +90,7 @@
     {{-- @fluxAppearance --}}
     @livewireStyles
     @stack('styles')
-    @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
@@ -103,7 +103,8 @@
     <livewire:navbar />
     @endif
 
-    {{ $slot }}
+    <main class="mt-5">{{ $slot }}</main>
+
     <livewire:footer />
 
 

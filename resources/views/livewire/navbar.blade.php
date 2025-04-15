@@ -1,7 +1,7 @@
 <nav class="bg-[#F9F9F9] dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 p-3">
-    <div class="container flex items-center justify-between px-0 gap-5">
+    <div class="flex items-center justify-between px-0 gap-5">
         <!-- Logo -->
-        <div class="flex items-center">
+        <div class="flex items-center flex-shrink-0">
             <a href="/" class="flex items-center">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
             </a>
@@ -15,11 +15,13 @@
                     </svg>
                     <span class="sr-only">Search icon</span>
                 </div>
-                <input type="text" name="query" id="search-navbar" class="w-full p-2 !pl-10 text-sm text-gray-900
-                border border-gray-300 rounded-lg bg-gray-50
-                focus:ring-[#086233] focus:border-[#086233]
-                dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Places to explore...">
+                <div class="w-full">
+                    <input type="text" name="query" id="search-navbar" class="w-full p-2 !pl-10 text-sm text-gray-900
+                    border border-gray-300 rounded-lg bg-gray-50
+                    focus:ring-[#086233] focus:border-[#086233]
+                    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+                    dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Places to explore...">
+                </div>
                 </div>
         </form>
 

@@ -83,7 +83,7 @@
                     </flux:button>
                 </flux:dropdown>
 
-                <flux:button class="bg-primary-600 hover:bg-primary-700 text-white rounded-md px-4 py-2 text-sm" href="/get-started">
+                <flux:button class="dora-style-btn px-4 py-2 text-sm" href="/get-started">
                     Share Your Story
                 </flux:button>
             </div>
