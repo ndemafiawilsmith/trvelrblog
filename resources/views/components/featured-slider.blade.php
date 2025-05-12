@@ -1,6 +1,6 @@
 <div class="container relative">
     <div class="my-5">
-        <h2 class="lg:text-2xl text-xl  font-bold">Featured Destinations</h2>
+        <h2 class="lg:text-2xl text-xl  font-bold">Feature Destinations</h2>
     </div>
 
 
