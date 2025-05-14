@@ -1,9 +1,9 @@
-<div class="container bg-cover bg-center h-full w-full  p-10"
+<div class="container bg-cover bg-center h-full w-full mt-5 p-5"
 
 >
 
-    <div class="flex flex-col lg:flex-row md:flex-row items-center h-full bg-[#06140dd8] bg-opacity-80 py-6 lg:py-0 md:py-0"
-    style="background-image: url(' assets/img/13.png')"
+    <div class="flex flex-col lg:flex-row md:flex-row items-center h-full bg-[#06140dd8] bg-opacity-80 py-6 lg:py-0 md:py-0 lg:px-0 md:px-0 rounded-lg shadow-lg gap-5 justify-evenly"
+    style="background-image: url('assets/img/13.png'); background-size: cover; background-position: center;">
     >
        <div class="flex justify-center items-center lg:flex-1 md:w-[70%]">
        <img src="assets/img/11.png" alt="" class="w-full"/>
