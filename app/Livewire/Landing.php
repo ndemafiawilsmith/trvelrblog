@@ -5,7 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 
- 
+
 class Landing extends Component
 {
     public $slides = [
@@ -78,39 +78,39 @@ class Landing extends Component
             'image' => 'assets/img/locations/dora-country-1.png',
             'flag-icon' => 'assets/img/flags/Ghana.png',
             'flag-name' => 'Ghana',
-            
+
         ],
         [
             'image' => 'assets/img/locations/dora-country-2.png',
             'flag-icon' => 'assets/img/flags/Nigeria.png',
             'flag-name' => 'Nigeria',
-            
+
         ],
         [
             'image' => 'assets/img/locations/dora-country-3.png',
             'flag-icon' => 'assets/img/flags/Kenya.png',
             'flag-name' => 'Kenya',
-            
+
         ],
         [
             'image' => 'assets/img/locations/dora-country-4.png',
             'flag-icon' => 'assets/img/flags/Tanzania.png',
             'flag-name' => 'Tanzania',
-            
+
         ],
         [
             'image' => 'assets/img/locations/dora-country-1.png',
             'flag-icon' => 'assets/img/flags/Ghana.png',
             'flag-name' => 'assets/img/flags/Ghana.png',
-            
+
         ],
         [
             'image' => 'assets/img/locations/dora-country-2.png',
             'flag-icon' => 'assets/img/flags/Nigeria.png',
             'flag-name' => 'Nigeria',
-            
+
         ],
-      
+
     ];
     public $discoverAfrica = [
         [
@@ -165,6 +165,6 @@ class Landing extends Component
 
     public function render()
     {
-        return view('livewire.landing',)->layout('livewire.layouts.app');
+        return view('livewire.pages.landing',)->layout('livewire.layouts.app');
     }
 }
