@@ -93,7 +93,7 @@
 <body>
 
     {{-- Conditionally display the navbar --}}
-    @if (Route::is('landing') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
+    @if (Route::is('home') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
     <x-landing-navbar />
     @elseif (Route::is('tour-marketplace') || Route::is('about') || Route::is('contact'))
     <x-navbar />

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Pages;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
@@ -165,6 +165,6 @@ class Landing extends Component
 
     public function render()
     {
-        return view('livewire.landing',)->layout('livewire.layouts.app');
+        return view('livewire.pages.landing',)->layout('livewire.layouts.app');
     }
 }
