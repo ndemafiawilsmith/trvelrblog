@@ -1,32 +1,30 @@
-<nav class="bg-[#F9F9F9] dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 p-3">
-    <div class="flex items-center justify-between px-0 gap-5">
+<nav class="bg-[#F9F9F9] sticky dark:bg-gray-900  w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-5 lg:px-5 px-2">
+    <div class="flex items-center justify-between px-0 lg:gap-5 gap-3">
         <!-- Logo -->
         <div class="flex items-center flex-shrink-0">
             <a href="/" class="flex items-center">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
+                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-6">
             </a>
         </div>
 
-        <form action="{{ route('search') }}" method="GET">
-            <div class="relative hidden gap-5 lg:flex lg:w-[550px] md:w-[250px]">
+        <form action="{{ route('search') }}" method="GET" class="flex-grow max-w-2xl w-full">
+            <div class="relative w-full">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-[#086233] dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                     <span class="sr-only">Search icon</span>
                 </div>
-                <div class="w-full">
-                    <input type="text" name="query" id="search-navbar" class="w-full p-2 !pl-10 text-sm text-gray-900
-                    border border-gray-300 rounded-lg bg-gray-50
-                    focus:ring-[#086233] focus:border-[#086233]
-                    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                    dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Places to explore...">
-                </div>
-                </div>
+                <input type="text" name="query" id="search-navbar" placeholder="Places to explore..." class="block w-full pl-10 pr-3 py-[2px] text-sm text-gray-900 border border-gray-300 rounded bg-gray-50
+                   focus:ring-[#086233] focus:border-[#086233]
+                   dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+                   dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
         </form>
 
+
         <!-- Desktop Navigation -->
-        <div class="hidden  items-center h:full lg:flex  lg:pl-5">
+        <div class="hidden  items-center h:full lg:flex md:flex lg:pl-5">
             <div class="">
                 <!-- Dropdowns and Call-to-Action -->
                 <div class="flex items-center space-x-3 relative">
@@ -71,8 +69,8 @@
         <!-- Mobile Hamburger Menu -->
         <div class="lg:hidden flex items-center">
             <button id="menu-toggle" class="text-gray-800 focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>

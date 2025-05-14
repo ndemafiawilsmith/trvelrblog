@@ -24,10 +24,9 @@
 
     {{-- SEO  --}}
 
-    {{-- <<<<<<< HEAD --}}
     <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures' }}">
     <meta property="og:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
-    {{-- ======= --}}
+
     <style>
         @font-face {
             font-family: 'dora';
@@ -44,7 +43,7 @@
     </style>
     <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures' }}">
     <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
-    {{-- >>>>>>> 95b2771 (Fix) --}}
+
     <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}">
     <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
