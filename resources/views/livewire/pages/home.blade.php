@@ -1,7 +1,7 @@
 <!-- resources/views/pages/home.blade.php -->
-@extends('layouts.app')
+
 <div>
-    <x-landing-navbar />
+    {{-- <livewire:landing-navbar /> --}}
 
     <div class="relative w-full h-[500px] lg:mt-16 mt-10">
         <!-- Swiper Container -->
@@ -61,7 +61,7 @@
 
 
     <x-hero-two />
-  
+
     <!-- Featured Destinations -->
     <x-featured-slider :editorsPicks="$editorsPicks" />
 
