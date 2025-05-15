@@ -1,14 +1,14 @@
 <nav class="bg-[#F9F9F9] dark:bg-gray-900 sticky w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-1">
-    <div class="max-w-screen-xl flex  items-center justify-between mx-auto p-3">
+    <div class="max-w-screen-xl flex  items-center justify-between mx-auto px-3 lg:p-2 md:p-2">
         <!-- Logo + Nav Items -->
         <div class="flex items-center gap-1 rtl:gap-reverse md:order-1">
-            <a href="/" wire:navigate class="flex items-center space-x-1 ">
+            <a href="/"  class="flex items-center space-x-1 ">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-6">
             </a>
 
-            <div class="!p-1 hidden lg:flex md:flex lg:gap-5 md:gap-2 text-sm">
-                <a wire:navigate href="/tour-marketplace">Tour Marketplace</a>
-                <a wire:navigate href="#">Traveler's Stories</a>
+            <div class="!p-1 hidden lg:flex md:flex lg:gap-5 md:gap-2 text-sm font-medium">
+                <a  href="/tour-marketplace">Tour Marketplace</a>
+                <a  href="#">Traveler's Stories</a>
             </div>
         </div>
 
@@ -30,7 +30,7 @@
 
                 <!-- Profile Dropdown -->
                 <flux:dropdown align="end" class="!bg-white !rounded-lg">
-                    <flux:profile circle name="Arizon" size="xs" avatar="https://unavatar.io/x/calebporzio" />
+                    <flux:profile circle name="" size="xs" avatar="https://unavatar.io/x/calebporzio" />
                     <flux:navmenu class="max-w-[12rem]">
                         <div class="px-2 py-1.5">
                             <flux:text size="sm">Signed in as</flux:text>

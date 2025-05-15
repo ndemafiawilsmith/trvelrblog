@@ -34,8 +34,8 @@
                             <img src="{{ $pick['image'] }}" alt="Image" loading='lazy' />
                             <a href="business.html" class="news-cat">{{ $pick['category'] }}</a>
                         </div>
-                        <div class="news-card-info">
-                            <h3 class='font-semibold text-sm'>
+                        <div class="mt-3">
+                            <h3 class='font-bold text-[15px]'>
                                 <a href="{{ $pick['link'] }}">{{ $pick['title'] }}</a>
                             </h3>
                              <ul class="flex flex-col">
