@@ -1,4 +1,4 @@
-<div class="container pt-32 pb-56 flex flex-col gap-10">
+<div class="container pb-56 flex flex-col gap-10">
      <div class="flex justify-center gap-3 mt-5 w-full">
                 <form action="{{ route('search') }}" method="GET" class="w-full ">
                    

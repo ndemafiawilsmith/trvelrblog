@@ -11,7 +11,7 @@
                     </p>
                 </div>
                 <div class="">
-                    <div class="flex lg:flex-row md:flex-row flex-col items-center  space-x-2">
+                    <div class="flex lg:flex-row md:flex-row flex-col items-center space-x-2 space-y-2">
                         <input type="email" class="border rounded px-3 py-1 w-full" placeholder="Enter your email">
                         <flux:button class="flex subscribe-btn" href="/get-started">
                             Let's go!

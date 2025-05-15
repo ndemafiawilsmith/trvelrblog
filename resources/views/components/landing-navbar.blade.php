@@ -1,15 +1,15 @@
-<nav class="bg-[#F9F9F9] dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+<nav class="bg-[#F9F9F9] dark:bg-gray-900 sticky w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 p-3">
+    <div class="max-w-screen-xl flex  items-center justify-between mx-auto p-3">
         <!-- Logo + Nav Items -->
-        <div class="flex items-center gap-3 rtl:gap-reverse md:order-1">
-            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-8">
+        <div class="flex items-center gap-1 rtl:gap-reverse md:order-1">
+            <a href="/" wire:navigate class="flex items-center space-x-1 ">
+                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-6">
             </a>
 
-            <flux:navbar class="!p-1 hidden lg:flex">
-                <flux:navbar.item href="/tour-marketplace">Tour Marketplace</flux:navbar.item>
-                <flux:navbar.item wire:navigate href="#">Traveler's Stories</flux:navbar.item>
-            </flux:navbar>
+            <div class="!p-1 hidden lg:flex md:flex lg:gap-5 md:gap-2 text-sm">
+                <a wire:navigate href="/tour-marketplace">Tour Marketplace</a>
+                <a wire:navigate href="#">Traveler's Stories</a>
+            </div>
         </div>
 
         <!-- Action Buttons & Mobile Toggle -->
@@ -59,7 +59,7 @@
                 aria-expanded="false"
             >
                 <span class="sr-only">Open main menu</span>
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -68,22 +68,20 @@
 
     <!-- Mobile Menu -->
      <div class="items-center justify-between hidden w-full md:hidden" id="navbar-sticky">
-   <div class="px-4 pt-2 pb-4 space-y-1 bg-white border-t border-gray-200">
-            <a href="/tour-marketplace" class="block py-2 px-3 text-gray-700 hover:bg-gray-50 rounded-md">
-                Tour Marketplace
-            </a>
-            <a href="#" class="block py-2 px-3 text-gray-700 hover:bg-gray-50 rounded-md">
-                Traveler's Stories
-            </a>
+   <div class="px-4 pt-2 pb-4 space-y-1 bg-[#f9f9f9] border-t border-gray-200">
+           <div class="mt-4 flex flex-col gap-5 text-sm">
+                <a wire:navigate href="/tour-marketplace">Tour Marketplace</a>
+                <a wire:navigate href="#">Traveler's Stories</a>
+            </div>
 
-            <div class="pt-4 mt-4 border-t border-gray-200 flex items-center justify-between">
+            <div class="pt-4 mt-4  flex items-center justify-between">
                 <flux:dropdown>
                     <flux:button class="!rounded-full !p-2 !w-10 !h-10 border border-gray-200" aria-label="Select language">
                         <flux:icon.globe-alt class="h-5 w-5" />
                     </flux:button>
                 </flux:dropdown>
 
-                <flux:button class="bg-primary-600 hover:bg-primary-700 text-white rounded-md px-4 py-2 text-sm" href="/get-started">
+                <flux:button class="dora-style-btn px-4 py-2 text-sm" href="/get-started">
                     Share Your Story
                 </flux:button>
             </div>

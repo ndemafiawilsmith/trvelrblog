@@ -1,9 +1,9 @@
 <!-- resources/views/pages/home.blade.php -->
 
 <div>
-    <livewire:landing-navbar />
+    {{-- <livewire:landing-navbar /> --}}
 
-    <div class="relative w-full h-[500px] lg:mt-16 mt-10">
+    <div class="relative w-full h-[500px] -mt-5">
         <!-- Swiper Container -->
         <swiper-container class="mySwiper w-full h-full !-z-50" pagination="true" loop="true" pagination-clickable="true" navigation="false" space-between="0" centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false" style="--swiper-pagination-color: #00FF45;">
 
@@ -61,7 +61,7 @@
 
 
     <x-hero-two />
-  
+
     <!-- Featured Destinations -->
     <x-featured-slider :editorsPicks="$editorsPicks" />
 
@@ -78,6 +78,8 @@
     <!-- Discover Africa -->
     <x-discover-slider :discoverAfrica="$discoverAfrica" />
 
+
+</div>
 {{-- Push page-specific styles (if any) --}}
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/sliders.css') }}">

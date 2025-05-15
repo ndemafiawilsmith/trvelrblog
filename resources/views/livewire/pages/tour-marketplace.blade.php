@@ -4,7 +4,7 @@
 
     <x-breadcrumbs :title="'Marketplace'" />
     <x-featured-slider :editorsPicks="$editorsPicks" />
-    {{-- <x-country-slider :countries="$countries" /> --}}
+    <x-country-slider :countries="$countries" />
 </div>
 
 {{-- Push page-specific styles (if any) --}}

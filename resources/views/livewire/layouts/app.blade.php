@@ -24,11 +24,9 @@
 
     {{-- SEO  --}}
 
-    {{-- <<<<<<< HEAD --}}
     <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures' }}">
-    <meta property="og:description"
-        content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
-    {{-- ======= --}}
+    <meta property="og:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
+
     <style>
         @font-face {
             font-family: 'dora';
@@ -41,11 +39,11 @@
         h3 {
             font-family: 'dora', sans-serif;
         }
+
     </style>
     <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures' }}">
-    <meta property="og:description"
-        content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
-    {{-- >>>>>>> 95b2771 (Fix) --}}
+    <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
+
     <meta property="og:title" content="{{ $title ?? 'Trvelr Blog - Your Gateway to African Travel Adventures'}}">
     <meta property="og:description" content="{{ $description ?? 'Trvelr Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta property="og:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
@@ -57,12 +55,10 @@
     <meta property="og:image" content="{{ asset('front-assets/img/favicon.png') }}">
 
 
-    <meta name="google:description"
-        content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
+    <meta name="google:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}">
     <meta name="google:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures' }}">
     <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
-    <meta name="description"
-        content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}" />
+    <meta name="description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries' }}" />
     <meta name="google:description" content="{{ $description ?? 'Dora Blog is your ultimate destination for exploring Africa\'s 54 countries'}}">
     <meta name="google:title" content="{{ $title ?? 'Dora Blog - Your Gateway to African Travel Adventures'}}">
     <meta name="google:image" content="{{ asset('front-assets/img/favicon.png') }}">
@@ -70,8 +66,7 @@
     <meta name="author" content="{{ $author ?? 'Dora Blog Team' }}">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords"
-        content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
+    <meta name="keywords" content="African travel, travel blog, African countries, travel guides, adventure stories, Africa tourism, African destinations, travel videos, African culture, travel community, travel experiences, downloadable guides" />
 
 
 
@@ -80,31 +75,32 @@
     <!-- Add this inside your `<head>` section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
 
     {{-- scripts --}}
-    
+
 
     {{-- @fluxAppearance --}}
     @livewireStyles
     @stack('styles')
-    @vite(['resources/css/luvi-ui.css', 'resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
 <body>
 
     {{-- Conditionally display the navbar --}}
-    @if (Route::is('landing') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
-        <livewire:landing-navbar />
+    @if (Route::is('home') || Route::is('search')) {{-- Replace 'landing' with your homepage route name --}}
+    <x-landing-navbar />
     @elseif (Route::is('tour-marketplace') || Route::is('about') || Route::is('contact'))
-    <livewire:navbar />
+    <x-navbar />
     @endif
 
-    {{ $slot }}
-    <livewire:footer />
+    <main class="mt-5">{{ $slot }}</main>
+
+    <x-footer />
 
 
 
@@ -124,14 +120,15 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
     </script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 </body>
 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 
 </body>
