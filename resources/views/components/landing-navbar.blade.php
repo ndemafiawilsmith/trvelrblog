@@ -1,4 +1,4 @@
-<nav class="bg-[#F9F9F9] dark:bg-gray-900 sticky w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 p-3">
+<nav class="bg-[#F9F9F9] dark:bg-gray-900 sticky w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-1">
     <div class="max-w-screen-xl flex  items-center justify-between mx-auto p-3">
         <!-- Logo + Nav Items -->
         <div class="flex items-center gap-1 rtl:gap-reverse md:order-1">

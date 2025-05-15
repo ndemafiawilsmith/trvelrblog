@@ -1,5 +1,5 @@
 <!-- City Escape -->
-    <div class="container pt-100 relative">
+    <div class="container pt-10 relative">
 
         <div class="section-title-two mb-2">
             <div class="row align-items-center">
@@ -38,13 +38,22 @@
                             <h3 class='font-semibold text-sm'>
                                 <a href="{{ $pick['link'] }}">{{ $pick['title'] }}</a>
                             </h3>
-                            <ul class="news-metainfo list-style">
-                                <li>
-                                    <i class="fi fi-rr-calendar-minus"></i>
-                                    <a href="news-by-date.html">{{ $pick['date'] }}</a>
+                             <ul class="flex flex-col">
+                               <li class="flex justify-between">
+                                 <p class="text-gray-600 text-[12px]">from</p>
+                                <p class="text-gray-600 text-[12px]">{{ $pick['tour_type'] }}</p>
                                 </li>
-                                <li><i class="fi fi-rr-clock-three"></i>{{ $pick['read_time'] }}</li>
-                            </ul>
+                                <li class="flex justify-between">
+
+                                    <p class="font-bold text-black">{{ $pick['amount'] }} <span class="text-xs text-gray-400 font-normal">per adult</span>
+                                </p>
+                                <div class="flex justify-between gap-1">
+                                    <x-ratings />
+                                    <span class="flex items-center">23</span>
+                                </div>
+                            </li>
+
+                        </ul>
                         </div>
                     </div>
                 </div>
