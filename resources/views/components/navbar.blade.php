@@ -39,7 +39,7 @@
                         </flux:navmenu>
                     </flux:dropdown>
                     <flux:dropdown align="end" class="!bg-white !rounded-lg">
-                        <flux:profile circle name="Arizon" size="xs" avatar="https://unavatar.io/x/calebporzio" />
+                        <flux:profile circle name="" size="xs" avatar="https://unavatar.io/x/calebporzio" />
                         <flux:navmenu class="max-w-[12rem]">
                             <div class="px-2 py-1.5">
                                 <flux:text size="sm">Signed in as</flux:text>
