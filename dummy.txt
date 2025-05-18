@@ -1,0 +1,6 @@
+use Livewire\Component;
+
+class FeaturedSlider extends Component
+
+
+

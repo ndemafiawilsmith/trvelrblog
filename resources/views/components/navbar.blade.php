@@ -1,4 +1,4 @@
-<nav class="bg-[#F9F9F9] sticky dark:bg-gray-900  w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-5 lg:px-5 px-2">
+<nav class="bg-[#F9F9F9] sticky dark:bg-gray-900  w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-3 lg:px-5 px-2">
     <div class="flex items-center justify-between px-0 lg:gap-5 gap-3">
         <!-- Logo -->
         <div class="flex items-center flex-shrink-0">
@@ -39,7 +39,7 @@
                         </flux:navmenu>
                     </flux:dropdown>
                     <flux:dropdown align="end" class="!bg-white !rounded-lg">
-                        <flux:profile circle name="Arizon" size="xs" avatar="https://unavatar.io/x/calebporzio" />
+                        <flux:profile circle name="" size="xs" avatar="https://unavatar.io/x/calebporzio" />
                         <flux:navmenu class="max-w-[12rem]">
                             <div class="px-2 py-1.5">
                                 <flux:text size="sm">Signed in as</flux:text>
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Mobile Hamburger Menu -->
-        <div class="lg:hidden flex items-center">
+        <div class="lg:hidden md:hidden flex items-center">
             <button id="menu-toggle" class="text-gray-800 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />

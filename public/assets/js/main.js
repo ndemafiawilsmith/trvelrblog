@@ -5,7 +5,7 @@
     window.addEventListener('load', function () {
         document.querySelector('body').classList.add("loaded")
     });
- 
+
     window.onload = function () {
         const getHeaderId = document.getElementById("navbar");
         if (getHeaderId) {
@@ -35,8 +35,8 @@
             };
         }
     };
- 
-    document.documentElement.style.setProperty('--livewire-progress-bar-color', '#00FF45');
+
+    // document.documentElement.style.setProperty('--livewire-progress-bar-color', '#00FF45');
 
     AOS.init({
         startEvent: 'load',
