@@ -1,0 +1,93 @@
+[33mcommit 6a169195c2e88c5f3a3587f0598ca1df93978ce5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 95b2771 eb261cd
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Mar 26 09:53:30 2025 +0100
+
+    before fetch
+
+[33mcommit 95b2771d93681f39ebf7d055918cc4eccd881132[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Feb 12 19:48:48 2025 +0100
+
+    Fix
+
+[33mcommit eb261cdcf8111c1cef827194189038930199d1b6[m
+Merge: 15d66a8 fea2248
+Author: Ndemafia Wilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Feb 12 18:50:24 2025 +0100
+
+    Merge pull request #1 from just-arizon/main
+    
+    Usability Refinement
+
+[33mcommit fea2248391a982e7cabf994e9682fd79d15f5f46[m
+Author: Arinze Chinweuba Calistus <calistusarinzechinweuba@gmail.com>
+Date:   Tue Feb 11 03:54:56 2025 +0100
+
+    logo size commit on dark theme
+
+[33mcommit 9e9947faaf32fc88a775ee48e57153303ddfca1a[m
+Author: Arinze Chinweuba Calistus <calistusarinzechinweuba@gmail.com>
+Date:   Tue Feb 11 03:36:23 2025 +0100
+
+    logo commit on dark theme
+
+[33mcommit 15d66a85f6c9c7c3da2537b8f6af8e11ab85875e[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Mon Feb 3 22:15:43 2025 +0100
+
+    ff
+
+[33mcommit 77d23be8bd2857474a36581df44975fdb36ec10f[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Mon Feb 3 21:45:01 2025 +0100
+
+    changed logo
+
+[33mcommit 2619dac9f4650f01ab3abc76ceae3cc3ebe71e63[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Mon Feb 3 15:49:44 2025 +0100
+
+    Fix
+
+[33mcommit ce9b92188743f2d2957eb683e1eac818cb8673b4[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Mon Feb 3 15:36:30 2025 +0100
+
+    Fix
+
+[33mcommit 89bda6276651aa187f74bc70609c8ef8310fff5b[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Sun Feb 2 18:59:13 2025 +0100
+
+    Issue
+
+[33mcommit 84fcbdcd9d98d5d415f5315d076a4e8c13ee0530[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Jan 29 20:18:44 2025 +0100
+
+    Second
+
+[33mcommit f1ba21806596d77866d11271106eeac96c324a01[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Jan 29 20:17:30 2025 +0100
+
+    Second
+
+[33mcommit b149e9aa8ca537bb00f5bfc4394d87dba5fe77d5[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Jan 29 20:16:08 2025 +0100
+
+    Second
+
+[33mcommit e220af4a54aec8e050a0087da5b0d8552fb5001f[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Wed Jan 29 20:12:48 2025 +0100
+
+    Second
+
+[33mcommit e6ccc00c2cfc383b6c0b994c7edee03e00466a4a[m
+Author: ndemafiawilsmith <wilsmithndemafia@gmail.com>
+Date:   Tue Jan 28 07:43:56 2025 +0100
+
+    initial
