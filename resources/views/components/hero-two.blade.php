@@ -15,7 +15,7 @@
         <div class="flex lg:justify-start md:justify-start justify-center">
             <button class="bg-white text-[#086233] font-bold py-2 px-4 rounded mt-4 text-base
             ">
-                <a href="#">Get Started</a>
+                <a href="#">Getting Started</a>
             </button>
         </div>
     </div>
